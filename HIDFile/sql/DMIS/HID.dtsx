@@ -1,35 +1,35 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="9/28/2021 11:21:38 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="AMEDHQNBJVNDZQ2"
   DTS:CreatorName="MHS\Walter.Walden1"
-  DTS:DTSID="{3FC785AC-192F-41A8-82C0-4FEE435D04F7}"
+  DTS:DTSID="{1F070C98-EB86-4EF0-BC0A-952EB75A83BE}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1033"
-  DTS:ObjectName="06_2022"
+  DTS:ObjectName="07_2022"
   DTS:PackageType="5"
-  DTS:VersionBuild="181"
-  DTS:VersionGUID="{729A64AE-83D2-4ECE-92E0-0CED2F69E363}">
+  DTS:VersionBuild="192"
+  DTS:VersionGUID="{A08A6275-2318-416C-AE08-484520D9C52F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[(LocalDB)\MSSQLLocalDB.HID]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+      DTS:DTSID="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
       DTS:ObjectName="(LocalDB)\MSSQLLocalDB.HID">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=HID;Integrated Security=True;Application Name=SSIS-Package-{E0A51F8E-7A60-4987-9281-4F838FBF9043}(LocalDB)\MSSQLLocalDB.HID;" />
+          DTS:ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=HID;Integrated Security=True;Application Name=SSIS-Package-{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}(LocalDB)\MSSQLLocalDB.HID;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ALL_SVC_HID_File CM]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{F55535C6-3F48-4B46-AA2F-7A71D951233B}"
+      DTS:DTSID="{AAC07282-705A-4B33-9307-15525A50F8B1}"
       DTS:ObjectName="ALL_SVC_HID_File CM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -40,7 +40,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\projects\HIDFile\HIDFile\Output\ALL_SVC_HID_2022_06_01.txt">
+          DTS:ConnectionString="C:\projects\HIDFile\HIDFile\Output\ALL_SVC_HID_2022_07_01.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="DataMonth"
-              DTS:DTSID="{EC76C494-9693-4512-8AE4-0FBE43D11034}"
+              DTS:DTSID="{6070A48A-CD13-4F51-9066-67ECD6543DA8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DMISID"
-              DTS:DTSID="{4E4FC016-B975-4CC5-97E4-9E724A59B98D}"
+              DTS:DTSID="{C63353A0-E8D6-4103-8BF0-CE064C9793F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="QuestionNum"
-              DTS:DTSID="{0694DD50-1AE2-4512-919B-D5B21DA96B18}"
+              DTS:DTSID="{DEA31154-43A8-472D-870C-02445B5427AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Value1"
-              DTS:DTSID="{AF065F10-6FEB-4DB9-9292-7B1C3184C08E}"
+              DTS:DTSID="{F2B0BDB2-8062-458C-B920-3105DF412A57}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Value2"
-              DTS:DTSID="{E94A8B9C-A97A-4FC2-86D9-E5D6ADE61A5D}"
+              DTS:DTSID="{06008642-89D9-4F26-825C-423576770F8D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -93,7 +93,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ALL_SVC_HIST_HID_File CM]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{5b868330-8ad2-4da2-81a5-54e3b68f95a5}"
+      DTS:DTSID="{2EE0BC7D-C307-4555-BDB9-E4987B546FB1}"
       DTS:ObjectName="ALL_SVC_HIST_HID_File CM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -112,7 +112,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="DataMonth"
-              DTS:DTSID="{2CAF8513-856F-43C9-9F36-7C3ABD63923D}"
+              DTS:DTSID="{FB9B5A4B-24EF-46F4-8A02-4824B003E773}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -121,7 +121,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DMISID"
-              DTS:DTSID="{7FA9BD32-8E3E-4FE2-BE4A-09B4F3391F6C}"
+              DTS:DTSID="{E88ACA5C-3F32-49D9-8D35-CE3D254B8A65}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -130,7 +130,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="QuestionNum"
-              DTS:DTSID="{A8895AFB-40D7-4643-BF00-CC9FE6F2816F}"
+              DTS:DTSID="{A2DF9B20-6A2B-4C96-8BC3-5C24B692093F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -139,7 +139,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Value1"
-              DTS:DTSID="{D4D6CDF3-DDE4-445A-9247-F3CAE34E199D}"
+              DTS:DTSID="{D333DEDF-40A7-4672-859D-1CF988DCC518}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -148,7 +148,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Value2"
-              DTS:DTSID="{367D2BF5-C2F6-470E-BEF7-929901943C73}"
+              DTS:DTSID="{BE78CCCD-7576-4230-ACF2-A0C26D1CB7F2}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -157,7 +157,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DMHRSI ECM]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{B8152160-B384-4207-BA87-0FE3E7D6459C}"
+      DTS:DTSID="{BF9C7ADA-8B3D-4577-8EB3-3DA150D1CBBE}"
       DTS:ObjectName="DMHRSI ECM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -167,53 +167,53 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Past Due Arrivals CM]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{0166FEFA-2F11-49D9-B53A-768440D5D886}"
+      DTS:DTSID="{B9F498DB-51E9-4F79-8957-A6A80216D618}"
       DTS:ObjectName="Past Due Arrivals CM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\projects\HIDFile\HIDFile\Input\Past Due Arrivals\3_11_2022\DoD SAFE-v2W2c7ijztDUx7Ni\2 - Past Due Arrivals Numbers Mar 2022 (USE FOR Jan 22 REPORTING.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\2_Reports\B.8.b - Past Due Arrivals\PastDueArrivalsForHID_202209.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Past Due Arrivals ECM]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{CF8F143B-3227-4AC3-9B37-CB5343769C54}"
+      DTS:DTSID="{70CF6988-EF2E-4759-A3D2-49364D15ECD3}"
       DTS:ObjectName="Past Due Arrivals ECM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\projects\HIDFile\HIDFile\Input\Past Due Arrivals\8_19_2022\PastDueArrivalsForHID_202208.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Projects\HIDFile\HIDFile\Input\Past Due Arrivals\9_21_2022\PastDueArrivalsForHID_202209.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Section E ECM]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{2201D4CF-32C7-4B6A-A05E-BBA281CA1194}"
+      DTS:DTSID="{7AA3B0AA-1E55-48C2-8958-FFA071264441}"
       DTS:ObjectName="Section E ECM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\projects\HIDFile\HIDFile\Input\Section E\2022\Jun\Section E Remedy Ticket Report HID File..xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\2_Reports\E.1.a-b - Remedy Tickets\202209\Section E Remedy Ticket Report HID File..xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Upload File CM]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{E40E3BB1-D705-49D8-9DC3-055FD77DB3C0}"
+      DTS:DTSID="{0683D4AD-B4BC-47A3-A402-EB6D90BA3249}"
       DTS:ObjectName="Upload File CM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\projects\HIDFile\HIDFile\Input\Upload\2022\Jun\TEST2_Upload_129_Sites_eDQ_Jun22_DM_Aug22_RM.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Projects\HIDFile\HIDFile\Input\Upload\2022\Jul\TEST2_Upload_129_Sites_eDQ_Jul22_DM_Sep22_RM.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{43D48041-C5AC-43EC-8DD3-EED0E9B5B225}"
+      DTS:DTSID="{907247D8-886A-498F-8D63-617B58B37144}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="Data_Date">
       <DTS:VariableValue
-        DTS:DataType="8">06/1/2022</DTS:VariableValue>
+        DTS:DataType="8">07/1/2022</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -222,17 +222,35 @@
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:Disabled="True"
-      DTS:DTSID="{E2F0F47C-5895-4A48-B979-EFE5BE8D61E5}"
+      DTS:DTSID="{93F6A90E-BDA9-47C9-B15C-31F955D39FE1}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Correct CHCS"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_Correct_CHCS" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Correct Versions"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{D0390DE4-7334-4F95-8512-7B7868713D56}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Correct Versions"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
+          SQLTask:IsStoredProc="True"
+          SQLTask:SqlStatementSource="usp_Correct_Versions" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -240,7 +258,7 @@
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:Disabled="True"
-      DTS:DTSID="{7748EB76-0371-4453-BF2F-AB5754FEED93}"
+      DTS:DTSID="{05EB253A-2745-4964-BFA9-605BC9139770}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Import DMHRSI"
@@ -893,7 +911,7 @@
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:Disabled="True"
-      DTS:DTSID="{C6731650-F984-4FDC-B251-3988D3069710}"
+      DTS:DTSID="{37515615-5666-449B-892B-517AB88C8675}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Import Section E Corrected Data"
@@ -1123,13 +1141,13 @@
                       cachedLength="255"
                       cachedName="QuestionNum"
                       externalMetadataColumnId="Package\Import Section E Corrected Data\Section E Corrections.Inputs[ADO NET Destination Input].ExternalColumns[QuestionNum]"
-                      lineageId="Package\Import Section E Corrected Data\411:invalid" />
+                      lineageId="Package\Import Section E Corrected Data\419:invalid" />
                     <inputColumn
                       refId="Package\Import Section E Corrected Data\Section E Corrections.Inputs[ADO NET Destination Input].Columns[Value 1]"
                       cachedDataType="r8"
                       cachedName="Value 1"
                       externalMetadataColumnId="Package\Import Section E Corrected Data\Section E Corrections.Inputs[ADO NET Destination Input].ExternalColumns[Value 1]"
-                      lineageId="Package\Import Section E Corrected Data\412:invalid" />
+                      lineageId="Package\Import Section E Corrected Data\420:invalid" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1191,15 +1209,15 @@
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:Disabled="True"
-      DTS:DTSID="{C013278A-9EB4-492F-8A09-DD85DF767C06}"
+      DTS:DTSID="{A98C2175-3E3A-45AD-AB61-FDF22E6BCB44}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Mark dates"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:SqlStatementSource="Delete from DMHRSiTSR  where dmis is null or [date]=@date&#xA;&#xA;update DMHRSiTSR set [date]=@date where [date] is null&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="@Date"
@@ -1214,7 +1232,7 @@
       DTS:refId="Package\Step  2 - Import Upload File - (Note, change location for this process)"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{1016D14E-AFF5-4A13-9C52-7354B746D43B}"
+      DTS:DTSID="{246B3B09-F27F-4A81-9C0C-40A38321E313}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step  2 - Import Upload File - (Note, change location for this process)"
@@ -3588,7 +3606,7 @@
       DTS:refId="Package\Step 1 - Truncate Data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Truncate Data"
-      DTS:DTSID="{9ACEAD9D-1A9C-4645-AE65-462B44C93B7B}"
+      DTS:DTSID="{39F6966D-B57A-4B87-8954-DE6C88E2F2F3}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 1 - Truncate Data"
@@ -3596,23 +3614,23 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
-          SQLTask:SqlStatementSource="Truncate table UploadByMTFs&#xA;&#xA;Truncate table  SectionETotals&#xA;&#xA;Truncate Table PastDueArrivals&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
+          SQLTask:SqlStatementSource="Truncate table UploadByMTFs&#xA;&#xA;Truncate table  SectionETotals&#xA;&#xA;Truncate Table PastDueArrivals&#xA;&#xA;Truncate Table HID" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Step 10 - Update Section E Data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Update Section E Data"
-      DTS:DTSID="{DDCDFCAE-3200-4124-B019-8F1093C8AB79}"
+      DTS:DTSID="{B35429A8-60AA-4601-864B-DD0C7D9AE4D5}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 10 - Update Section E Data"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_UpdateSectionE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
@@ -3628,15 +3646,15 @@
       DTS:refId="Package\Step 11 - Remove Line Feeds"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{3770CD9C-9514-43F9-A57A-96847D302EEE}"
+      DTS:DTSID="{7D04F70A-5B4A-4C17-A4B3-BEFF45E9BA91}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 11 - Remove Line Feeds"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_RemoveLineFeeds" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
@@ -3645,7 +3663,7 @@
       DTS:refId="Package\Step 12 - Export Data to HID File"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{64EFD20B-462A-4DB5-A7AD-FF9983BEF670}"
+      DTS:DTSID="{AC5C0405-67CF-4AEB-9CE2-9DF20149364B}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 12 - Export Data to HID File"
@@ -3955,7 +3973,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:refId="Package\Step 13 - Export Historical Data to HID File"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{c69ce9e3-bcd3-45b1-a0d1-e3a612c44e1e}"
+      DTS:DTSID="{AA86DB1B-BB24-4EFB-9F14-E055EB446438}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 13 - Export Historical Data to HID File"
@@ -3990,8 +4008,8 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
               <connections>
                 <connection
                   refId="Package\Step 13 - Export Historical Data to HID File\ARMY NCR File (Destination).Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ALL_SVC_HID_File CM]"
-                  connectionManagerRefId="Package.ConnectionManagers[ALL_SVC_HID_File CM]"
+                  connectionManagerID="Package.ConnectionManagers[ALL_SVC_HIST_HID_File CM]"
+                  connectionManagerRefId="Package.ConnectionManagers[ALL_SVC_HIST_HID_File CM]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -4265,7 +4283,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{F6202416-7FC1-4EC4-9A1D-328047B27519}"
+      DTS:DTSID="{08E39BE0-E9FE-4795-9F45-90C0DFDE8C8A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 3 - Import Section E Data - (Note, change location for this process)"
@@ -4614,6 +4632,16 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                       lineageId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].Columns[TOTCOUNT]"
                       name="TOTCOUNT"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].Columns[F5]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].ExternalColumns[F5]"
+                      length="255"
+                      lineageId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].Columns[F5]"
+                      name="F5"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4635,6 +4663,11 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                       refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].ExternalColumns[TOTCOUNT]"
                       dataType="r8"
                       name="TOTCOUNT" />
+                    <externalMetadataColumn
+                      refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].ExternalColumns[F5]"
+                      dataType="wstr"
+                      length="255"
+                      name="F5" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4664,6 +4697,12 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                       dataType="r8"
                       lineageId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Error Output].Columns[TOTCOUNT]"
                       name="TOTCOUNT" />
+                    <outputColumn
+                      refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Error Output].Columns[F5]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Error Output].Columns[F5]"
+                      name="F5" />
                     <outputColumn
                       refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -4836,7 +4875,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:refId="Package\Step 4 - Import Past Due Arrivals - (Note, change location for this process)"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{59375FD6-2565-4399-A73B-382BDEC20A48}"
+      DTS:DTSID="{0B993E10-37AE-421C-998B-17ADBC3B6A16}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 4 - Import Past Due Arrivals - (Note, change location for this process)"
@@ -4862,7 +4901,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">Sheet1$</property>
+                  name="OpenRowset">B8b$</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -5146,15 +5185,15 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:refId="Package\Step 5 - Update Date for Genesis Sites - (Note, change month for this process)"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Remove Empty Rows"
-      DTS:DTSID="{F5D65B74-AFC9-41E2-8D94-A3F4137F2AE9}"
+      DTS:DTSID="{5E356770-3973-41C7-A5D5-B211C2308795}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 5 - Update Date for Genesis Sites - (Note, change month for this process)"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:SqlStatementSource="&#xA;&#xA;DELETE FROM [dbo].[UploadByMTFs] WHERE Service is null&#xA;&#xA;UPDATE  [dbo].[UploadByMTFs] &#xA;SET data_month=@dataMonth&#xA;&#xA;UPDATE  [dbo].[SectionETotals] &#xA;SET data_month=@dataMonth" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="@dataMonth"
@@ -5169,15 +5208,15 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:refId="Package\Step 6 - Load Upload Data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Load Upload Data"
-      DTS:DTSID="{CB1B3841-5487-4E95-9407-6897300A7B35}"
+      DTS:DTSID="{6C2D2FC9-80B7-44D3-8AC2-D05811766530}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 6 - Load Upload Data"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_LoadUploadData" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
@@ -5193,15 +5232,15 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:refId="Package\Step 7 - Load Section E Placeholder Data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{B58541B8-41E2-4EEF-A6FA-ADAB6EB3DDA6}"
+      DTS:DTSID="{13885B0E-9D67-4939-89FE-BBCDDF7E57D7}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 7 - Load Section E Placeholder Data"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_LoadSectionEPlaceHolders" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
@@ -5217,15 +5256,15 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:refId="Package\Step 8 - Load Past Due Arrivals Placeholder Data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{BA2288FA-644F-4F60-A75D-66C60976A730}"
+      DTS:DTSID="{81B10647-0281-4E81-BA22-A7B74FE4F67B}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 8 - Load Past Due Arrivals Placeholder Data"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_LoadPastDueArrivalsPlaceHolders" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
@@ -5241,15 +5280,15 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:refId="Package\Step 9 - Update Past Due Arrivals Data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{B1D9CAB7-ECFE-424B-BA8E-3BA35570D66C}"
+      DTS:DTSID="{76B118EB-D31B-4BD0-972C-B1BF5D4BE0CA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 9 - Update Past Due Arrivals Data"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_UpdatePastDueArrivals" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
@@ -5259,15 +5298,15 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:Disabled="True"
-      DTS:DTSID="{029E6C06-4D45-4467-92E6-7E17CA3D0376}"
+      DTS:DTSID="{19CD3917-7DF2-40FB-9AC6-3E93B562FE08}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update HID Table"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E0A51F8E-7A60-4987-9281-4F838FBF9043}"
+          SQLTask:Connection="{EC5B04BC-C603-4568-B16A-5E9CD3FA28A4}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_Correct_HID" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
@@ -5277,7 +5316,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{30B40C46-B880-4207-B558-B7C957092683}"
+      DTS:DTSID="{4A66689D-1E6B-4765-9A1D-FA6968F57307}"
       DTS:From="Package\Step  2 - Import Upload File - (Note, change location for this process)"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -5285,7 +5324,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{21D23557-56AE-4378-9668-2F757894BB29}"
+      DTS:DTSID="{D18E4252-CC06-4596-9DC0-D0B612ABC526}"
       DTS:From="Package\Step 1 - Truncate Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -5293,7 +5332,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
       DTS:CreationName=""
-      DTS:DTSID="{1A9160F0-5D77-4569-9684-9974C3302B58}"
+      DTS:DTSID="{E65AB65E-162D-4985-A3CE-2E11A332F521}"
       DTS:From="Package\Step 9 - Update Past Due Arrivals Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 10"
@@ -5301,7 +5340,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
       DTS:CreationName=""
-      DTS:DTSID="{A109A072-61C6-471A-A500-20F084BEDBBC}"
+      DTS:DTSID="{1A486717-06E5-4B8D-925E-0D98BA6BE34E}"
       DTS:From="Package\Step 4 - Import Past Due Arrivals - (Note, change location for this process)"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 11"
@@ -5309,7 +5348,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
       DTS:CreationName=""
-      DTS:DTSID="{AF9DA946-75A4-4B17-A4A6-9DE97B270283}"
+      DTS:DTSID="{190E4846-E3DF-40E7-BAB9-376D48A9D6A8}"
       DTS:From="Package\Step 11 - Remove Line Feeds"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 12"
@@ -5317,7 +5356,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
       DTS:CreationName=""
-      DTS:DTSID="{7E59FD98-C2C5-4153-A1DC-4182AFDEBD53}"
+      DTS:DTSID="{2678BED4-9600-4096-A0D0-EC3ADBAD435F}"
       DTS:From="Package\Import Section E Corrected Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 13"
@@ -5325,7 +5364,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 14]"
       DTS:CreationName=""
-      DTS:DTSID="{1D421136-7684-41C3-A6CE-6BDA6A9ABA63}"
+      DTS:DTSID="{EA4E7706-4FB3-4CB7-9E71-E80988CEDA63}"
       DTS:From="Package\Update HID Table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 14"
@@ -5333,23 +5372,15 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 15]"
       DTS:CreationName=""
-      DTS:DTSID="{AC6F6225-793F-4DB5-9A88-CAB1C1060D92}"
+      DTS:DTSID="{38D5B908-6DA6-47E3-98DD-8E42220A6F43}"
       DTS:From="Package\Step 4 - Import Past Due Arrivals - (Note, change location for this process)"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 15"
       DTS:To="Package\Step 5 - Update Date for Genesis Sites - (Note, change month for this process)" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 16]"
-      DTS:CreationName=""
-      DTS:DTSID="{2955071D-AB1C-4EEC-8DE0-478226DD2438}"
-      DTS:From="Package\Correct CHCS"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 16"
-      DTS:To="Package\Step 11 - Remove Line Feeds" />
-    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 17]"
       DTS:CreationName=""
-      DTS:DTSID="{108145FE-C200-48DB-A16C-0C9A16DD0E41}"
+      DTS:DTSID="{FE8A1AA5-689B-4CE7-BF57-75662733945C}"
       DTS:From="Package\Step 12 - Export Data to HID File"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 17"
@@ -5357,7 +5388,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{2BF2E163-65AB-4462-924C-C9CDCC0646E2}"
+      DTS:DTSID="{2155A8F8-8891-4C2C-BEE7-66F333F70A7A}"
       DTS:From="Package\Step 3 - Import Section E Data - (Note, change location for this process)"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
@@ -5365,7 +5396,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{0151A0CC-F018-46A4-8E61-C661D392082C}"
+      DTS:DTSID="{B36D40F2-FD41-449D-97D3-229A2E966769}"
       DTS:From="Package\Import DMHRSI"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
@@ -5373,7 +5404,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{ACA57D14-6E82-4D56-BAB6-7F99CFCD4305}"
+      DTS:DTSID="{ABE4BA7A-E71E-4473-B8C0-D8BB6D078A09}"
       DTS:From="Package\Step 5 - Update Date for Genesis Sites - (Note, change month for this process)"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
@@ -5381,7 +5412,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
-      DTS:DTSID="{4A8C8093-78C0-4695-B107-CAA78881A1FD}"
+      DTS:DTSID="{E476ED7A-788C-47BD-AF66-E516A5BEAF49}"
       DTS:From="Package\Step 6 - Load Upload Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
@@ -5389,7 +5420,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
       DTS:CreationName=""
-      DTS:DTSID="{A1817A6B-71A3-4F26-9D15-3E509A745820}"
+      DTS:DTSID="{2BEC01C9-00CF-4AE6-95A0-63E17DD81F9E}"
       DTS:From="Package\Step 7 - Load Section E Placeholder Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 6"
@@ -5397,15 +5428,15 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
       DTS:CreationName=""
-      DTS:DTSID="{C95CC8ED-80BA-4DE9-8D57-A19ED355F263}"
+      DTS:DTSID="{C4C11C9F-D6AE-4406-93F4-96AC6DDCDC4F}"
       DTS:From="Package\Step 10 - Update Section E Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 7"
-      DTS:To="Package\Correct CHCS" />
+      DTS:To="Package\Step 11 - Remove Line Feeds" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
       DTS:CreationName=""
-      DTS:DTSID="{6BB2E9CD-803C-42D6-B85B-8448FCA69450}"
+      DTS:DTSID="{7EA2852F-795E-45E7-A809-E014517E9C99}"
       DTS:From="Package\Import DMHRSI"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 8"
@@ -5413,7 +5444,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
       DTS:CreationName=""
-      DTS:DTSID="{7BFF5293-9FAA-47F2-9D37-0A7B86C7DD11}"
+      DTS:DTSID="{40540C90-49C2-49FF-9F9F-CF8FD7CF7D6F}"
       DTS:From="Package\Step 8 - Load Past Due Arrivals Placeholder Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 9"
@@ -5434,7 +5465,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         <NodeLayout
           Size="142,42"
           Id="Package\Correct CHCS"
-          TopLeft="341,356" />
+          TopLeft="534,378" />
         <NodeLayout
           Size="154,42"
           Id="Package\Import DMHRSI"
@@ -5442,7 +5473,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         <NodeLayout
           Size="231,42"
           Id="Package\Import Section E Corrected Data"
-          TopLeft="805.028576800288,395.682356793493" />
+          TopLeft="741.028576800288,447.682356793493" />
         <NodeLayout
           Size="131,42"
           Id="Package\Mark dates"
@@ -5486,7 +5517,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         <NodeLayout
           Size="204,42"
           Id="Package\Step 6 - Load Upload Data"
-          TopLeft="538,209" />
+          TopLeft="539,210" />
         <NodeLayout
           Size="272,42"
           Id="Package\Step 7 - Load Section E Placeholder Data"
@@ -5502,7 +5533,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         <NodeLayout
           Size="163,42"
           Id="Package\Update HID Table"
-          TopLeft="587.885724270101,412.564709940584" />
+          TopLeft="526.885724270101,456.564709940584" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="471.714287650828,100.847059368345">
@@ -5651,30 +5682,30 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="805.028576800288,416.682356793493">
+          TopLeft="741.028576800288,468.682356793493">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-54.1428525301869,16.882353147091"
+              EndConnector="-51.1428525301869,8.88235314709101"
               Start="0,0"
-              End="-46.6428525301869,16.882353147091">
+              End="-43.6428525301869,8.88235314709101">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-23.0714262650935,0" />
+                    End="-21.5714262650935,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-23.0714262650935,0"
-                    Point2="-27.0714262650935,0"
-                    Point3="-27.0714262650935,4" />
+                    Point1="-21.5714262650935,0"
+                    Point2="-25.5714262650935,0"
+                    Point3="-25.5714262650935,4" />
                   <mssgle:LineSegment
-                    End="-27.0714262650935,12.882353147091" />
+                    End="-25.5714262650935,4.88235314709101" />
                   <mssgle:CubicBezierSegment
-                    Point1="-27.0714262650935,12.882353147091"
-                    Point2="-27.0714262650935,16.882353147091"
-                    Point3="-31.0714262650935,16.882353147091" />
+                    Point1="-25.5714262650935,4.88235314709101"
+                    Point2="-25.5714262650935,8.88235314709101"
+                    Point3="-29.5714262650935,8.88235314709101" />
                   <mssgle:LineSegment
-                    End="-46.6428525301869,16.882353147091" />
+                    End="-43.6428525301869,8.88235314709101" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5685,30 +5716,18 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="587.885724270101,433.564709940584">
+          TopLeft="526.885724270101,477.994121362099">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-271.885722294633,44.85882284303"
+              EndConnector="-210.885722294633,0"
               Start="0,0"
-              End="-264.385722294633,44.85882284303">
+              End="-203.385722294633,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-131.942861147317,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-131.942861147317,0"
-                    Point2="-135.942861147317,0"
-                    Point3="-135.942861147317,4" />
-                  <mssgle:LineSegment
-                    End="-135.942861147317,40.85882284303" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-135.942861147317,40.85882284303"
-                    Point2="-135.942861147317,44.85882284303"
-                    Point3="-139.942861147317,44.85882284303" />
-                  <mssgle:LineSegment
-                    End="-264.385722294633,44.85882284303" />
+                    End="-203.385722294633,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5743,40 +5762,6 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                     Point3="-850.071426673811,44.723530522845" />
                   <mssgle:LineSegment
                     End="-850.071426673811,73.94706104569" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 16]"
-          TopLeft="341,377">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-36,23"
-              Start="0,0"
-              End="-28.5,23">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-14,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14,0"
-                    Point2="-18,0"
-                    Point3="-18,4" />
-                  <mssgle:LineSegment
-                    End="-18,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18,19"
-                    Point2="-18,23"
-                    Point3="-22,23" />
-                  <mssgle:LineSegment
-                    End="-28.5,23" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5893,9 +5878,9 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="425.404760007144,3.55293895431001"
+              EndConnector="426.404760007144,4.55293895431001"
               Start="0,0"
-              End="425.404760007144,-3.94706104568999">
+              End="426.404760007144,-2.94706104568999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -5906,13 +5891,13 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                     Point2="0,-22.5"
                     Point3="4,-22.5" />
                   <mssgle:LineSegment
-                    End="421.404760007144,-22.5" />
+                    End="422.404760007144,-22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="421.404760007144,-22.5"
-                    Point2="425.404760007144,-22.5"
-                    Point3="425.404760007144,-18.5" />
+                    Point1="422.404760007144,-22.5"
+                    Point2="426.404760007144,-22.5"
+                    Point3="426.404760007144,-18.5" />
                   <mssgle:LineSegment
-                    End="425.404760007144,-3.94706104568999" />
+                    End="426.404760007144,-2.94706104568999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5923,13 +5908,13 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="672.666666666667,209">
+          TopLeft="673.666666666667,210">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="218.333333333333,2"
+              EndConnector="217.333333333333,1"
               Start="0,0"
-              End="218.333333333333,-5.5">
+              End="217.333333333333,-6.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -5940,13 +5925,13 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                     Point2="0,-22.5"
                     Point3="4,-22.5" />
                   <mssgle:LineSegment
-                    End="214.333333333333,-22.5" />
+                    End="213.333333333333,-22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="214.333333333333,-22.5"
-                    Point2="218.333333333333,-22.5"
-                    Point3="218.333333333333,-18.5" />
+                    Point1="213.333333333333,-22.5"
+                    Point2="217.333333333333,-22.5"
+                    Point3="217.333333333333,-18.5" />
                   <mssgle:LineSegment
-                    End="218.333333333333,-5.5" />
+                    End="217.333333333333,-6.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5995,26 +5980,26 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="224.5,25"
+              EndConnector="9,48"
               Start="0,0"
-              End="224.5,17.5">
+              End="9,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.5" />
+                    End="0,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8.5"
-                    Point2="0,12.5"
-                    Point3="4,12.5" />
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
                   <mssgle:LineSegment
-                    End="220.5,12.5" />
+                    End="5,24" />
                   <mssgle:CubicBezierSegment
-                    Point1="220.5,12.5"
-                    Point2="224.5,12.5"
-                    Point3="224.5,16.5" />
+                    Point1="5,24"
+                    Point2="9,24"
+                    Point3="9,28" />
                   <mssgle:LineSegment
-                    End="224.5,17.5" />
+                    End="9,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6079,6 +6064,10 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Correct Versions"
+          TopLeft="341,380" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -6312,7 +6301,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     design-time-name="Package\Step  2 - Import Upload File - (Note, change location for this process)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="203,42"
           Id="Package\Step  2 - Import Upload File - (Note, change location for this process)\Load data to Upload Table"
@@ -6320,39 +6309,41 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         <NodeLayout
           Size="174,42"
           Id="Package\Step  2 - Import Upload File - (Note, change location for this process)\Upload File (Source)"
-          TopLeft="50.4,28.8" />
+          TopLeft="49.4,27.8" />
         <EdgeLayout
           Id="Package\Step  2 - Import Upload File - (Note, change location for this process).Paths[Excel Source Output]"
-          TopLeft="137.4,70.8">
+          TopLeft="136.4,69.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="30.1,85.2"
+              EndConnector="31.1,86.2"
               Start="0,0"
-              End="30.1,77.7">
+              End="31.1,78.7">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.6" />
+                    End="0,39.1" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,38.6"
-                    Point2="0,42.6"
-                    Point3="4,42.6" />
+                    Point1="0,39.1"
+                    Point2="0,43.1"
+                    Point3="4,43.1" />
                   <mssgle:LineSegment
-                    End="26.1,42.6" />
+                    End="27.1,43.1" />
                   <mssgle:CubicBezierSegment
-                    Point1="26.1,42.6"
-                    Point2="30.1,42.6"
-                    Point3="30.1,46.6" />
+                    Point1="27.1,43.1"
+                    Point2="31.1,43.1"
+                    Point3="31.1,47.1" />
                   <mssgle:LineSegment
-                    End="30.1,77.7" />
+                    End="31.1,78.7" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6443,7 +6434,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     design-time-name="Package\Step 13 - Export Historical Data to HID File">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="141,42"
           Id="Package\Step 13 - Export Historical Data to HID File\HID (Source)"
@@ -6483,9 +6474,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6509,13 +6498,13 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
           Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source"
           TopLeft="48,40" />
         <NodeLayout
-          Size="180,42"
-          Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Error logging Records"
-          TopLeft="446.857150467075,193.929414484493" />
-        <NodeLayout
           Size="152,42"
           Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Section E totals"
           TopLeft="100,196" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Error logging Records"
+          TopLeft="446.857150467075,193.929414484493" />
         <NodeLayout
           Size="156,42"
           Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Data Conversion"
@@ -6645,7 +6634,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Error logging Records">
+    design-time-name="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Section E totals">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6653,7 +6642,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Section E totals">
+    design-time-name="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Error logging Records">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

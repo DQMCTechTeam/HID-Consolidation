@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="9/28/2021 11:21:38 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="07_2022"
   DTS:PackageType="5"
-  DTS:VersionBuild="183"
-  DTS:VersionGUID="{BCE74A67-895F-41BD-8F4A-C538EABFAE32}">
+  DTS:VersionBuild="192"
+  DTS:VersionGUID="{0DE754E3-7D42-4F2E-9E1D-C4F5FE8CE2C4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -40,7 +40,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\projects\HIDFile\HIDFile\Output\ALL_SVC_HID_2022_06_01.txt">
+          DTS:ConnectionString="C:\projects\HIDFile\HIDFile\Output\ALL_SVC_HID_2022_07_01.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -171,7 +171,7 @@
       DTS:ObjectName="Past Due Arrivals CM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\projects\HIDFile\HIDFile\Input\Past Due Arrivals\3_11_2022\DoD SAFE-v2W2c7ijztDUx7Ni\2 - Past Due Arrivals Numbers Mar 2022 (USE FOR Jan 22 REPORTING.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\2_Reports\B.8.b - Past Due Arrivals\PastDueArrivalsForHID_202209.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -191,7 +191,7 @@
       DTS:ObjectName="Section E ECM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\projects\HIDFile\HIDFile\Input\Section E\2022\Jun\Section E Remedy Ticket Report HID File..xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\2_Reports\E.1.a-b - Remedy Tickets\202209\Section E Remedy Ticket Report HID File..xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -213,7 +213,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Data_Date">
       <DTS:VariableValue
-        DTS:DataType="8">06/1/2022</DTS:VariableValue>
+        DTS:DataType="8">07/1/2022</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -226,13 +226,31 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Correct CHCS"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{57092BE6-A5C0-4727-95F6-BD8238D8C7DB}"
           SQLTask:IsStoredProc="True"
           SQLTask:SqlStatementSource="usp_Correct_CHCS" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Correct Versions"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{c965706f-1388-463d-b37e-b85981ddcae5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Correct Versions"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{57092BE6-A5C0-4727-95F6-BD8238D8C7DB}"
+          SQLTask:IsStoredProc="True"
+          SQLTask:SqlStatementSource="usp_Correct_Versions" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1123,13 +1141,13 @@
                       cachedLength="255"
                       cachedName="QuestionNum"
                       externalMetadataColumnId="Package\Import Section E Corrected Data\Section E Corrections.Inputs[ADO NET Destination Input].ExternalColumns[QuestionNum]"
-                      lineageId="Package\Import Section E Corrected Data\415:invalid" />
+                      lineageId="Package\Import Section E Corrected Data\411:invalid" />
                     <inputColumn
                       refId="Package\Import Section E Corrected Data\Section E Corrections.Inputs[ADO NET Destination Input].Columns[Value 1]"
                       cachedDataType="r8"
                       cachedName="Value 1"
                       externalMetadataColumnId="Package\Import Section E Corrected Data\Section E Corrections.Inputs[ADO NET Destination Input].ExternalColumns[Value 1]"
-                      lineageId="Package\Import Section E Corrected Data\416:invalid" />
+                      lineageId="Package\Import Section E Corrected Data\412:invalid" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1195,7 +1213,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Mark dates"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -3597,7 +3615,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{57092BE6-A5C0-4727-95F6-BD8238D8C7DB}"
-          SQLTask:SqlStatementSource="Truncate table UploadByMTFs&#xA;&#xA;Truncate table  SectionETotals&#xA;&#xA;Truncate Table PastDueArrivals&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="Truncate table UploadByMTFs&#xA;&#xA;Truncate table  SectionETotals&#xA;&#xA;Truncate Table PastDueArrivals&#xA;&#xA;Truncate Table HID" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3608,7 +3626,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 10 - Update Section E Data"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -3632,7 +3650,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 11 - Remove Line Feeds"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -3990,8 +4008,8 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
               <connections>
                 <connection
                   refId="Package\Step 13 - Export Historical Data to HID File\ARMY NCR File (Destination).Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ALL_SVC_HID_File CM]"
-                  connectionManagerRefId="Package.ConnectionManagers[ALL_SVC_HID_File CM]"
+                  connectionManagerID="Package.ConnectionManagers[ALL_SVC_HIST_HID_File CM]"
+                  connectionManagerRefId="Package.ConnectionManagers[ALL_SVC_HIST_HID_File CM]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -4614,6 +4632,16 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                       lineageId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].Columns[TOTCOUNT]"
                       name="TOTCOUNT"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].Columns[F5]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].ExternalColumns[F5]"
+                      length="255"
+                      lineageId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].Columns[F5]"
+                      name="F5"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4635,6 +4663,11 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                       refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].ExternalColumns[TOTCOUNT]"
                       dataType="r8"
                       name="TOTCOUNT" />
+                    <externalMetadataColumn
+                      refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Output].ExternalColumns[F5]"
+                      dataType="wstr"
+                      length="255"
+                      name="F5" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4664,6 +4697,12 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                       dataType="r8"
                       lineageId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Error Output].Columns[TOTCOUNT]"
                       name="TOTCOUNT" />
+                    <outputColumn
+                      refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Error Output].Columns[F5]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Error Output].Columns[F5]"
+                      name="F5" />
                     <outputColumn
                       refId="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -5150,7 +5189,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 5 - Update Date for Genesis Sites - (Note, change month for this process)"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5173,7 +5212,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 6 - Load Upload Data"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5197,7 +5236,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 7 - Load Section E Placeholder Data"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5221,7 +5260,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 8 - Load Past Due Arrivals Placeholder Data"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5245,7 +5284,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Step 9 - Update Past Due Arrivals Data"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5339,14 +5378,6 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
       DTS:ObjectName="Constraint 15"
       DTS:To="Package\Step 5 - Update Date for Genesis Sites - (Note, change month for this process)" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 16]"
-      DTS:CreationName=""
-      DTS:DTSID="{C74E040A-4035-4DA1-A9F2-D5EFE8D06F87}"
-      DTS:From="Package\Correct CHCS"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 16"
-      DTS:To="Package\Step 11 - Remove Line Feeds" />
-    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 17]"
       DTS:CreationName=""
       DTS:DTSID="{591F9E88-022C-45F9-B408-C48EA88E3E8C}"
@@ -5397,11 +5428,11 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
       DTS:CreationName=""
-      DTS:DTSID="{E409ABF7-24D1-4ED4-B055-152FF175F13C}"
+      DTS:DTSID="{2600578E-187C-4414-8852-CE9EB5CC327B}"
       DTS:From="Package\Step 10 - Update Section E Data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 7"
-      DTS:To="Package\Correct CHCS" />
+      DTS:To="Package\Step 11 - Remove Line Feeds" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
       DTS:CreationName=""
@@ -5434,7 +5465,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         <NodeLayout
           Size="142,42"
           Id="Package\Correct CHCS"
-          TopLeft="341,356" />
+          TopLeft="534,378" />
         <NodeLayout
           Size="154,42"
           Id="Package\Import DMHRSI"
@@ -5442,7 +5473,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         <NodeLayout
           Size="231,42"
           Id="Package\Import Section E Corrected Data"
-          TopLeft="805.028576800288,395.682356793493" />
+          TopLeft="741.028576800288,447.682356793493" />
         <NodeLayout
           Size="131,42"
           Id="Package\Mark dates"
@@ -5502,7 +5533,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         <NodeLayout
           Size="163,42"
           Id="Package\Update HID Table"
-          TopLeft="587.885724270101,412.564709940584" />
+          TopLeft="526.885724270101,456.564709940584" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="471.714287650828,100.847059368345">
@@ -5651,30 +5682,30 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="805.028576800288,416.682356793493">
+          TopLeft="741.028576800288,468.682356793493">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-54.1428525301869,16.882353147091"
+              EndConnector="-51.1428525301869,8.88235314709101"
               Start="0,0"
-              End="-46.6428525301869,16.882353147091">
+              End="-43.6428525301869,8.88235314709101">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-23.0714262650935,0" />
+                    End="-21.5714262650935,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-23.0714262650935,0"
-                    Point2="-27.0714262650935,0"
-                    Point3="-27.0714262650935,4" />
+                    Point1="-21.5714262650935,0"
+                    Point2="-25.5714262650935,0"
+                    Point3="-25.5714262650935,4" />
                   <mssgle:LineSegment
-                    End="-27.0714262650935,12.882353147091" />
+                    End="-25.5714262650935,4.88235314709101" />
                   <mssgle:CubicBezierSegment
-                    Point1="-27.0714262650935,12.882353147091"
-                    Point2="-27.0714262650935,16.882353147091"
-                    Point3="-31.0714262650935,16.882353147091" />
+                    Point1="-25.5714262650935,4.88235314709101"
+                    Point2="-25.5714262650935,8.88235314709101"
+                    Point3="-29.5714262650935,8.88235314709101" />
                   <mssgle:LineSegment
-                    End="-46.6428525301869,16.882353147091" />
+                    End="-43.6428525301869,8.88235314709101" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5685,30 +5716,18 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="587.885724270101,433.564709940584">
+          TopLeft="526.885724270101,477.994121362099">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-271.885722294633,44.85882284303"
+              EndConnector="-210.885722294633,0"
               Start="0,0"
-              End="-264.385722294633,44.85882284303">
+              End="-203.385722294633,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-131.942861147317,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-131.942861147317,0"
-                    Point2="-135.942861147317,0"
-                    Point3="-135.942861147317,4" />
-                  <mssgle:LineSegment
-                    End="-135.942861147317,40.85882284303" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-135.942861147317,40.85882284303"
-                    Point2="-135.942861147317,44.85882284303"
-                    Point3="-139.942861147317,44.85882284303" />
-                  <mssgle:LineSegment
-                    End="-264.385722294633,44.85882284303" />
+                    End="-203.385722294633,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5743,40 +5762,6 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
                     Point3="-850.071426673811,44.723530522845" />
                   <mssgle:LineSegment
                     End="-850.071426673811,73.94706104569" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 16]"
-          TopLeft="341,377">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-36,23"
-              Start="0,0"
-              End="-28.5,23">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-14,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14,0"
-                    Point2="-18,0"
-                    Point3="-18,4" />
-                  <mssgle:LineSegment
-                    End="-18,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18,19"
-                    Point2="-18,23"
-                    Point3="-22,23" />
-                  <mssgle:LineSegment
-                    End="-28.5,23" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5995,26 +5980,26 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="224.5,25"
+              EndConnector="9,48"
               Start="0,0"
-              End="224.5,17.5">
+              End="9,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,8.5" />
+                    End="0,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,8.5"
-                    Point2="0,12.5"
-                    Point3="4,12.5" />
+                    Point1="0,20"
+                    Point2="0,24"
+                    Point3="4,24" />
                   <mssgle:LineSegment
-                    End="220.5,12.5" />
+                    End="5,24" />
                   <mssgle:CubicBezierSegment
-                    Point1="220.5,12.5"
-                    Point2="224.5,12.5"
-                    Point3="224.5,16.5" />
+                    Point1="5,24"
+                    Point2="9,24"
+                    Point3="9,28" />
                   <mssgle:LineSegment
-                    End="224.5,17.5" />
+                    End="9,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6079,6 +6064,10 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Correct Versions"
+          TopLeft="341,380" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -6312,7 +6301,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     design-time-name="Package\Step  2 - Import Upload File - (Note, change location for this process)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="203,42"
           Id="Package\Step  2 - Import Upload File - (Note, change location for this process)\Load data to Upload Table"
@@ -6352,7 +6341,9 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6443,7 +6434,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     design-time-name="Package\Step 13 - Export Historical Data to HID File">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="141,42"
           Id="Package\Step 13 - Export Historical Data to HID File\HID (Source)"
@@ -6483,9 +6474,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6509,13 +6498,13 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
           Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Excel Source"
           TopLeft="48,40" />
         <NodeLayout
-          Size="180,42"
-          Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Error logging Records"
-          TopLeft="446.857150467075,193.929414484493" />
-        <NodeLayout
           Size="152,42"
           Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Section E totals"
           TopLeft="100,196" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Error logging Records"
+          TopLeft="446.857150467075,193.929414484493" />
         <NodeLayout
           Size="156,42"
           Id="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Data Conversion"
@@ -6551,7 +6540,9 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6585,7 +6576,9 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6641,7 +6634,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Error logging Records">
+    design-time-name="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Section E totals">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6649,7 +6642,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Section E totals">
+    design-time-name="Package\Step 3 - Import Section E Data - (Note, change location for this process)\Error logging Records">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6660,7 +6653,7 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
     design-time-name="Package\Step 4 - Import Past Due Arrivals - (Note, change location for this process)">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="227,42"
           Id="Package\Step 4 - Import Past Due Arrivals - (Note, change location for this process)\Past Due Arrivals Staging Table"
@@ -6700,7 +6693,9 @@ Select * from [dbo].[HID] where DataMonth IN (select max(DataMonth) from [dbo].[
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">AMEDHQNBJVNDZQ2</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAig7GJcmXVk2fF/XTb4OnfAAAAAACAAAAAAADZgAAwAAAABAAAAAvAkyCGSGnXjiyeYvHlZgWAAAAAASAAACgAAAAEAAAAMS90l7uaO8QBeD2ROEd9QKIAAAAKnevMQZyRphh3SnZn478rSrEcys/92KS1d+vAH5WzeyIXTiHv+QUMb/tZeKUgn4si06bJh5R7790xEaV7vdqe1mOKMm/D2sOgPBuzWBVqJnbRv4FDz9biLUWmh6t/SzEj/TKq3Up0tjpXZtxC5yPypA4Sf67ogE4C6vcTPLLIBvZ1qHhKLwYUhQAAADhfMi8618F9NdoQACYKlLrpxhq2w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAig7GJcmXVk2fF/XTb4OnfAAAAAACAAAAAAADZgAAwAAAABAAAACvIZUzhEmz+XNsT1HmN5PCAAAAAASAAACgAAAAEAAAAORCWL/pfzeEQ9Xz7NU4XM+IAAAAq+sMvID1Uc99mNZUhmjA7dZPOY6HDpdDQ2KTWI8n2n5paaMwYzytQHNL+5srN6FOcLBg+qKV938bOGxoeTcD32lUVOLdZ3IC4NL6kdowyky4mpo3Brk1QogX3UKqqal2tEs5oe3xbLFKEyYgC3EVKxjQ7Jr9I7fdkdi0wTAslFdTK8tO+RwigRQAAADZ2iWzPoAVJkB0uzxjhTUTEOmUjQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -9562,10 +9562,10 @@
                 <SSIS:Property SSIS:Name="Name">07_2022</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">183</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">188</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{BCE74A67-895F-41BD-8F4A-C538EABFAE32}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0C3EC08F-D764-4CA2-A979-D07F6662A00A}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -9716,7 +9716,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\projects\HIDFile\HIDFile\Output\ALL_SVC_HID_2022_06_01.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\projects\HIDFile\HIDFile\Output\ALL_SVC_HID_2022_07_01.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -10152,7 +10152,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\projects\HIDFile\HIDFile\Input\Past Due Arrivals\3_11_2022\DoD SAFE-v2W2c7ijztDUx7Ni\2 - Past Due Arrivals Numbers Mar 2022 (USE FOR Jan 22 REPORTING.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\2_Reports\B.8.b - Past Due Arrivals\PastDueArrivalsForHID_202209.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -10167,7 +10167,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\projects\HIDFile\HIDFile\Input\Past Due Arrivals\3_11_2022\DoD SAFE-v2W2c7ijztDUx7Ni\2 - Past Due Arrivals Numbers Mar 2022 (USE FOR Jan 22 REPORTING.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">W:\2_Reports\B.8.b - Past Due Arrivals\PastDueArrivalsForHID_202209.xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -10240,7 +10240,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\projects\HIDFile\HIDFile\Input\Past Due Arrivals\3_11_2022\DoD SAFE-v2W2c7ijztDUx7Ni\2 - Past Due Arrivals Numbers Mar 2022 (USE FOR Jan 22 REPORTING.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">W:\2_Reports\B.8.b - Past Due Arrivals\PastDueArrivalsForHID_202209.xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -10386,7 +10386,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\projects\HIDFile\HIDFile\Input\Section E\2022\Jun\Section E Remedy Ticket Report HID File..xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\2_Reports\E.1.a-b - Remedy Tickets\202209\Section E Remedy Ticket Report HID File..xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -10401,7 +10401,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\projects\HIDFile\HIDFile\Input\Section E\2022\Jun\Section E Remedy Ticket Report HID File..xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">W:\2_Reports\E.1.a-b - Remedy Tickets\202209\Section E Remedy Ticket Report HID File..xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -10474,7 +10474,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\projects\HIDFile\HIDFile\Input\Section E\2022\Jun\Section E Remedy Ticket Report HID File..xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">W:\2_Reports\E.1.a-b - Remedy Tickets\202209\Section E Remedy Ticket Report HID File..xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
