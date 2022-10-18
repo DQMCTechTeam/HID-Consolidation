@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="HID_Historical"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{3E05A8C7-245C-4309-ADD1-D9C52907C1FC}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{FAE09574-A5A2-4639-AB51-FA0C8E04C12E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
