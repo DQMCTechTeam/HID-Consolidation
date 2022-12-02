@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="HID_Historical"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{FAE09574-A5A2-4639-AB51-FA0C8E04C12E}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{646411B6-04DF-440A-93CD-7530155C4E2B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -90,6 +90,16 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HID Historical Export CM]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{87890179-1E16-4390-9866-A088D74D0501}"
+      DTS:ObjectName="HID Historical Export CM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Projects\HIDFile\HIDFile\Output\HID Historical.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -519,6 +529,23 @@
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Populate HID Archive"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Populate HID Archive"
+      DTS:DTSID="{7EF173E9-5B55-47D0-A74B-FEFC85866453}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Populate HID Archive"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EFB668C9-2468-4A45-A2C8-025D57E0EC19}"
+          SQLTask:IsStoredProc="True"
+          SQLTask:SqlStatementSource="usp_Create_HID_Archive" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Truncate Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -534,6 +561,567 @@
           SQLTask:SqlStatementSource="Truncate Table HID_Historical" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Write Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{6C8E8A45-EAAE-41D4-9499-D00D96581644}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Write Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Write Data\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."HID_Archive"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Write Data\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(LocalDB)\MSSQLLocalDB.HID]"
+                  connectionManagerRefId="Package.ConnectionManagers[(LocalDB)\MSSQLLocalDB.HID]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[QuestionNum]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[QuestionNum]"
+                      length="9"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[QuestionNum]"
+                      name="QuestionNum"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[DMISID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DMISID]"
+                      length="4"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[DMISID]"
+                      name="DMISID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-07-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-07-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-07-01]"
+                      name="2022-07-01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-06-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-06-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-06-01]"
+                      name="2022-06-01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-05-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-05-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-05-01]"
+                      name="2022-05-01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-04-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-04-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-04-01]"
+                      name="2022-04-01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-03-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-03-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-03-01]"
+                      name="2022-03-01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-02-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-02-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-02-01]"
+                      name="2022-02-01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-01-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-01-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-01-01]"
+                      name="2022-01-01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2021-09-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2021-09-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2021-09-01]"
+                      name="2021-09-01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2021-08-01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2021-08-01]"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2021-08-01]"
+                      name="2021-08-01"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[QuestionNum]"
+                      dataType="wstr"
+                      length="9"
+                      name="QuestionNum" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DMISID]"
+                      dataType="wstr"
+                      length="4"
+                      name="DMISID" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-07-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2022-07-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-06-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2022-06-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-05-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2022-05-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-04-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2022-04-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-03-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2022-03-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-02-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2022-02-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2022-01-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2022-01-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2021-09-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2021-09-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[2021-08-01]"
+                      dataType="wstr"
+                      length="50"
+                      name="2021-08-01" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[QuestionNum]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[QuestionNum]"
+                      name="QuestionNum" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DMISID]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DMISID]"
+                      name="DMISID" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-07-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-07-01]"
+                      name="2022-07-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-06-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-06-01]"
+                      name="2022-06-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-05-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-05-01]"
+                      name="2022-05-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-04-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-04-01]"
+                      name="2022-04-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-03-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-03-01]"
+                      name="2022-03-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-02-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-02-01]"
+                      name="2022-02-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-01-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2022-01-01]"
+                      name="2022-01-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2021-09-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2021-09-01]"
+                      name="2021-09-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2021-08-01]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[2021-08-01]"
+                      name="2021-08-01" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Write Data\Excel Destination"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Excel Destination"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Data$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Write Data\Excel Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[HID Historical Export CM]"
+                  connectionManagerRefId="Package.ConnectionManagers[HID Historical Export CM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Excel Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[QuestionNum]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="QuestionNum"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[QuestionNum]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[QuestionNum]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[DMISID]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="DMISID"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[DMISID]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[DMISID]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2022-07-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2022-07-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-07-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-07-01]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2022-06-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2022-06-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-06-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-06-01]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2022-05-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2022-05-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-05-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-05-01]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2022-04-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2022-04-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-04-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-04-01]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2022-03-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2022-03-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-03-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-03-01]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2022-02-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2022-02-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-02-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-02-01]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2022-01-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2022-01-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-01-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2022-01-01]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2021-09-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2021-09-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2021-09-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2021-09-01]" />
+                    <inputColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].Columns[2021-08-01]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="2021-08-01"
+                      externalMetadataColumnId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2021-08-01]"
+                      lineageId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output].Columns[2021-08-01]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[QuestionNum]"
+                      dataType="wstr"
+                      length="255"
+                      name="QuestionNum" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[DMISID]"
+                      dataType="wstr"
+                      length="255"
+                      name="DMISID" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-07-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2022-07-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-06-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2022-06-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-05-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2022-05-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-04-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2022-04-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-03-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2022-03-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-02-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2022-02-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2022-01-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2022-01-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2021-09-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2021-09-01" />
+                    <externalMetadataColumn
+                      refId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[2021-08-01]"
+                      dataType="wstr"
+                      length="255"
+                      name="2021-08-01" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Write Data\Excel Destination.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Write Data\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Write Data\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Write Data\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Write Data\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Write Data.Paths[ADO NET Source Output]"
+              endId="Package\Write Data\Excel Destination.Inputs[Excel Destination Input]"
+              name="ADO NET Source Output"
+              startId="Package\Write Data\ADO NET Source.Outputs[ADO NET Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -544,6 +1132,22 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Foreach Loop Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{290C2DC3-F064-43D4-821A-10CDB3DD60B3}"
+      DTS:From="Package\Foreach Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Populate HID Archive" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{18886A70-A9C9-410E-8985-0B3E5E056571}"
+      DTS:From="Package\Populate HID Archive"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Write Data" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -556,7 +1160,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="151.2,41.6"
           Id="Package\Foreach Loop Container\Import HID File"
@@ -569,9 +1173,17 @@
           Id="Package\Foreach Loop Container"
           TopLeft="94.8571444725504,105.223530887485" />
         <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Populate HID Archive"
+          TopLeft="107,337" />
+        <NodeLayout
           Size="148.8,41.6"
           Id="Package\Truncate Table"
           TopLeft="73.1428583884726,21.4117650061743" />
+        <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\Write Data"
+          TopLeft="116,430" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="147.542858388473,63.0117650061743">
@@ -606,6 +1218,74 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="267.85714447255,268.223530887485">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-71.3571444725504,68.776469112515"
+              Start="0,0"
+              End="-71.3571444725504,61.276469112515">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.3882345562575" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.3882345562575"
+                    Point2="0,34.3882345562575"
+                    Point3="-4,34.3882345562575" />
+                  <mssgle:LineSegment
+                    End="-67.3571444725504,34.3882345562575" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-67.3571444725504,34.3882345562575"
+                    Point2="-71.3571444725504,34.3882345562575"
+                    Point3="-71.3571444725504,38.3882345562575" />
+                  <mssgle:LineSegment
+                    End="-71.3571444725504,61.276469112515" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="196.5,379">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16,51"
+              Start="0,0"
+              End="-16,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.5"
+                    Point2="0,25.5"
+                    Point3="-4,25.5" />
+                  <mssgle:LineSegment
+                    End="-12,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12,25.5"
+                    Point2="-16,25.5"
+                    Point3="-16,29.5" />
+                  <mssgle:LineSegment
+                    End="-16,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -619,35 +1299,35 @@
           Id="Package\Foreach Loop Container\Import HID File\Flat File Source"
           TopLeft="12.8,24.8" />
         <NodeLayout
-          Size="178.4,41.6"
+          Size="179.2,41.6"
           Id="Package\Foreach Loop Container\Import HID File\ADO NET Destination"
           TopLeft="30.4,128.8" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Import HID File.Paths[Flat File Source Output]"
-          TopLeft="88,66.4">
+          TopLeft="87.8,66.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31.6,62.4"
+              EndConnector="32.1,62"
               Start="0,0"
-              End="31.6,54.9">
+              End="32.1,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.2" />
+                    End="0,27" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.2"
-                    Point2="0,31.2"
-                    Point3="4,31.2" />
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
                   <mssgle:LineSegment
-                    End="27.6,31.2" />
+                    End="28.1,31" />
                   <mssgle:CubicBezierSegment
-                    Point1="27.6,31.2"
-                    Point2="31.6,31.2"
-                    Point3="31.6,35.2" />
+                    Point1="28.1,31"
+                    Point2="32.1,31"
+                    Point3="32.1,35" />
                   <mssgle:LineSegment
-                    End="31.6,54.9" />
+                    End="32.1,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -664,6 +1344,77 @@
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Write Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Write Data\Excel Destination"
+          TopLeft="44,124" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Write Data\ADO NET Source"
+          TopLeft="36,27" />
+        <EdgeLayout
+          Id="Package\Write Data.Paths[ADO NET Source Output]"
+          TopLeft="115,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,55"
+              Start="0,0"
+              End="8.5,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
+                  <mssgle:LineSegment
+                    End="4.5,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,27.5"
+                    Point2="8.5,27.5"
+                    Point3="8.5,31.5" />
+                  <mssgle:LineSegment
+                    End="8.5,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Write Data\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Write Data\Excel Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
