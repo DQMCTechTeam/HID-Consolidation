@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="HID_Historical"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{646411B6-04DF-440A-93CD-7530155C4E2B}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{36C881BD-1582-48DB-8CFE-EF08FE974917}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -171,7 +171,7 @@
                       description="The Destination database table name."
                       expressionType="Notify"
                       name="TableOrViewName"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."HID_Historical"</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."HID Historical Errors"</property>
                     <property
                       dataType="System.Int32"
                       description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
@@ -246,23 +246,35 @@
                           cachedName="Value2"
                           externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Value2]"
                           lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[Value2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ErrorCode]"
+                          cachedDataType="i4"
+                          cachedName="ErrorCode"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[ErrorColumn]"
+                          cachedDataType="i4"
+                          cachedName="ErrorColumn"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DataMonth]"
                           dataType="wstr"
-                          length="10"
+                          length="50"
                           name="DataMonth" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[DMISID]"
                           dataType="wstr"
-                          length="4"
+                          length="50"
                           name="DMISID" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[QuestionNum]"
                           dataType="wstr"
-                          length="9"
+                          length="50"
                           name="QuestionNum" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Value1]"
@@ -274,6 +286,14 @@
                           dataType="wstr"
                           length="50"
                           name="Value2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ErrorCode]"
+                          dataType="i4"
+                          name="ErrorCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ErrorColumn]"
+                          dataType="i4"
+                          name="ErrorColumn" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -295,6 +315,313 @@
                           refId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Import HID File\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input].Columns[DataMonth]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="DataMonth"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[DataMonth]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input].Columns[DMISID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="DMISID"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[DMISID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input].Columns[QuestionNum]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="QuestionNum"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[QuestionNum]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input].Columns[Value1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Value1"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[Value1]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input].Columns[Value2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Value2"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[Value2]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[DataMonth_cnv]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="11"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[DataMonth_cnv]"
+                          name="DataMonth_cnv"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[DataMonth]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[DMISID_cnv]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          length="4"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[DMISID_cnv]"
+                          name="DMISID_cnv"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[DMISID]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[QuestionNum_cnv]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          length="15"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[QuestionNum_cnv]"
+                          name="QuestionNum_cnv"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[QuestionNum]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[Value1_cnv]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[Value1_cnv]"
+                          name="Value1_cnv"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[Value1]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[Value2_cnv]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="RedirectRow"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[Value2_cnv]"
+                          name="Value2_cnv"
+                          truncationRowDisposition="RedirectRow">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[Value2]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Import HID File\Error Output"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="Error Output"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"HID HIstorical Error Output"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Import HID File\Error Output.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[(LocalDB)\MSSQLLocalDB.HID]"
+                      connectionManagerRefId="Package.ConnectionManagers[(LocalDB)\MSSQLLocalDB.HID]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].Columns[Flat File Source Error Output Column]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="Flat File Source Error Output Column"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].ExternalColumns[Flat File Source Error Output Column]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].Columns[ErrorCode]"
+                          cachedDataType="i4"
+                          cachedName="ErrorCode"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].ExternalColumns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].Columns[ErrorColumn]"
+                          cachedDataType="i4"
+                          cachedName="ErrorColumn"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].ExternalColumns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].ExternalColumns[Flat File Source Error Output Column]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="Flat File Source Error Output Column" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].ExternalColumns[ErrorCode]"
+                          dataType="i4"
+                          name="ErrorCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input].ExternalColumns[ErrorColumn]"
+                          dataType="i4"
+                          name="ErrorColumn" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Import HID File\Error Output.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Error Output.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Error Output.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\Error Output.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Error Output.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -338,12 +665,12 @@
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DataMonth]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[DataMonth]"
                           name="DataMonth"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -360,12 +687,12 @@
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DMISID]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[DMISID]"
                           name="DMISID"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -382,12 +709,12 @@
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[QuestionNum]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[QuestionNum]"
                           name="QuestionNum"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -404,12 +731,12 @@
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value1]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[Value1]"
                           name="Value1"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -426,12 +753,12 @@
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Value2]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output].Columns[Value2]"
                           name="Value2"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -507,11 +834,171 @@
                     </output>
                   </outputs>
                 </component>
+                <component
+                  refId="Package\Foreach Loop Container\Import HID File\HID Historical"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="HID Historical"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."HID_Historical"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Import HID File\HID Historical.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[(LocalDB)\MSSQLLocalDB.HID]"
+                      connectionManagerRefId="Package.ConnectionManagers[(LocalDB)\MSSQLLocalDB.HID]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].Columns[QuestionNum_cnv]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="QuestionNum_cnv"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[QuestionNum]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[QuestionNum_cnv]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].Columns[DMISID_cnv]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="DMISID_cnv"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[DMISID]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[DMISID_cnv]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].Columns[Value1_cnv]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Value1_cnv"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[Value1]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[Value1_cnv]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].Columns[Value2_cnv]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Value2_cnv"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[Value2]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[Value2_cnv]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].Columns[DataMonth_cnv]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="11"
+                          cachedName="DataMonth_cnv"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[DataMonth]"
+                          lineageId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output].Columns[DataMonth_cnv]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[DataMonth]"
+                          dataType="wstr"
+                          length="11"
+                          name="DataMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[DMISID]"
+                          dataType="wstr"
+                          length="4"
+                          name="DMISID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[QuestionNum]"
+                          dataType="wstr"
+                          length="15"
+                          name="QuestionNum" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[Value1]"
+                          dataType="wstr"
+                          length="50"
+                          name="Value1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input].ExternalColumns[Value2]"
+                          dataType="wstr"
+                          length="50"
+                          name="Value2" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Import HID File\HID Historical.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import HID File\HID Historical.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Import HID File\HID Historical.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Import HID File\HID Historical.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
               </components>
               <paths>
                 <path
-                  refId="Package\Foreach Loop Container\Import HID File.Paths[Flat File Source Output]"
+                  refId="Package\Foreach Loop Container\Import HID File.Paths[Data Conversion Error Output]"
                   endId="Package\Foreach Loop Container\Import HID File\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  name="Data Conversion Error Output"
+                  startId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Error Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Import HID File.Paths[Data Conversion Output]"
+                  endId="Package\Foreach Loop Container\Import HID File\HID Historical.Inputs[ADO NET Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Foreach Loop Container\Import HID File\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Import HID File.Paths[Flat File Source Error Output]"
+                  endId="Package\Foreach Loop Container\Import HID File\Error Output.Inputs[ADO NET Destination Input]"
+                  name="Flat File Source Error Output"
+                  startId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Error Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Import HID File.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Import HID File\Data Conversion.Inputs[Data Conversion Input]"
                   name="Flat File Source Output"
                   startId="Package\Foreach Loop Container\Import HID File\Flat File Source.Outputs[Flat File Source Output]" />
               </paths>
@@ -1162,54 +1649,54 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151.2,41.6"
+          Size="151,42"
           Id="Package\Foreach Loop Container\Import HID File"
           TopLeft="23.5428581841138,10.2588245933031" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="345.6,120"
-          Size="345.6,163.2"
+          PanelSize="346,120"
+          Size="346,163"
           Id="Package\Foreach Loop Container"
-          TopLeft="94.8571444725504,105.223530887485" />
+          TopLeft="94.8571444725504,104.223530887485" />
         <NodeLayout
-          Size="179.2,41.6"
+          Size="179,42"
           Id="Package\Populate HID Archive"
           TopLeft="107,337" />
         <NodeLayout
-          Size="148.8,41.6"
+          Size="149,42"
           Id="Package\Truncate Table"
           TopLeft="73.1428583884726,21.4117650061743" />
         <NodeLayout
-          Size="128.8,41.6"
+          Size="129,42"
           Id="Package\Write Data"
           TopLeft="116,430" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="147.542858388473,63.0117650061743">
+          TopLeft="147.642858388473,63.4117650061743">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="120.114286084078,42.2117658813107"
+              EndConnector="120.214286084078,40.8117658813107"
               Start="0,0"
-              End="120.114286084078,34.7117658813107">
+              End="120.214286084078,33.3117658813107">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.1058829406554" />
+                    End="0,16.4058829406553" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.1058829406554"
-                    Point2="0,21.1058829406554"
-                    Point3="4,21.1058829406554" />
+                    Point1="0,16.4058829406553"
+                    Point2="0,20.4058829406553"
+                    Point3="4,20.4058829406553" />
                   <mssgle:LineSegment
-                    End="116.114286084078,21.1058829406554" />
+                    End="116.214286084078,20.4058829406553" />
                   <mssgle:CubicBezierSegment
-                    Point1="116.114286084078,21.1058829406554"
-                    Point2="120.114286084078,21.1058829406554"
-                    Point3="120.114286084078,25.1058829406554" />
+                    Point1="116.214286084078,20.4058829406553"
+                    Point2="120.214286084078,20.4058829406553"
+                    Point3="120.214286084078,24.4058829406553" />
                   <mssgle:LineSegment
-                    End="120.114286084078,34.7117658813107" />
+                    End="120.214286084078,33.3117658813107" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1220,30 +1707,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="267.85714447255,268.223530887485">
+          TopLeft="267.85714447255,267.223530887485">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-71.3571444725504,68.776469112515"
+              EndConnector="-71.3571444725504,69.776469112515"
               Start="0,0"
-              End="-71.3571444725504,61.276469112515">
+              End="-71.3571444725504,62.276469112515">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.3882345562575" />
+                    End="0,30.8882345562575" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.3882345562575"
-                    Point2="0,34.3882345562575"
-                    Point3="-4,34.3882345562575" />
+                    Point1="0,30.8882345562575"
+                    Point2="0,34.8882345562575"
+                    Point3="-4,34.8882345562575" />
                   <mssgle:LineSegment
-                    End="-67.3571444725504,34.3882345562575" />
+                    End="-67.3571444725504,34.8882345562575" />
                   <mssgle:CubicBezierSegment
-                    Point1="-67.3571444725504,34.3882345562575"
-                    Point2="-71.3571444725504,34.3882345562575"
-                    Point3="-71.3571444725504,38.3882345562575" />
+                    Point1="-67.3571444725504,34.8882345562575"
+                    Point2="-71.3571444725504,34.8882345562575"
+                    Point3="-71.3571444725504,38.8882345562575" />
                   <mssgle:LineSegment
-                    End="-71.3571444725504,61.276469112515" />
+                    End="-71.3571444725504,62.276469112515" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1293,41 +1780,159 @@
     design-time-name="Package\Foreach Loop Container\Import HID File">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="156,42"
+          Id="Package\Foreach Loop Container\Import HID File\Data Conversion"
+          TopLeft="171,142" />
+        <NodeLayout
+          Size="150,42"
           Id="Package\Foreach Loop Container\Import HID File\Flat File Source"
-          TopLeft="12.8,24.8" />
+          TopLeft="10.8,25.8" />
         <NodeLayout
-          Size="179.2,41.6"
+          Size="179,42"
           Id="Package\Foreach Loop Container\Import HID File\ADO NET Destination"
-          TopLeft="30.4,128.8" />
+          TopLeft="361,252" />
         <EdgeLayout
-          Id="Package\Foreach Loop Container\Import HID File.Paths[Flat File Source Output]"
-          TopLeft="87.8,66.8">
+          Id="Package\Foreach Loop Container\Import HID File.Paths[Data Conversion Error Output]"
+          TopLeft="273.666666666667,184">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32.1,62"
+              EndConnector="176.833333333333,68"
               Start="0,0"
-              End="32.1,54.5">
+              End="176.833333333333,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27" />
+                    End="0,23.6142131979696" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="4,31" />
+                    Point1="0,23.6142131979696"
+                    Point2="0,27.6142131979696"
+                    Point3="4,27.6142131979696" />
                   <mssgle:LineSegment
-                    End="28.1,31" />
+                    End="172.833333333333,27.6142131979696" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.1,31"
-                    Point2="32.1,31"
-                    Point3="32.1,35" />
+                    Point1="172.833333333333,27.6142131979696"
+                    Point2="176.833333333333,27.6142131979696"
+                    Point3="176.833333333333,31.6142131979696" />
                   <mssgle:LineSegment
-                    End="32.1,54.5" />
+                    End="176.833333333333,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.3302799479167,32.6142131979696,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Import HID File.Paths[Flat File Source Output]"
+          TopLeft="85.8,67.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="163.2,74.2"
+              Start="0,0"
+              End="163.2,66.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.1"
+                    Point2="0,37.1"
+                    Point3="4,37.1" />
+                  <mssgle:LineSegment
+                    End="159.2,37.1" />
+                  <mssgle:CubicBezierSegment
+                    Point1="159.2,37.1"
+                    Point2="163.2,37.1"
+                    Point3="163.2,41.1" />
+                  <mssgle:LineSegment
+                    End="163.2,66.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Foreach Loop Container\Import HID File\Error Output"
+          TopLeft="293,71" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Import HID File.Paths[Flat File Source Error Output]"
+          TopLeft="160.8,46.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="132.2,45.2"
+              Start="0,0"
+              End="124.7,45.2">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="62.1,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62.1,0"
+                    Point2="66.1,0"
+                    Point3="66.1,4" />
+                  <mssgle:LineSegment
+                    End="66.1,41.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.1,41.2"
+                    Point2="66.1,45.2"
+                    Point3="70.1,45.2" />
+                  <mssgle:LineSegment
+                    End="124.7,45.2" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="2.47361328125,-17.609375,127.2527734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Foreach Loop Container\Import HID File\HID Historical"
+          TopLeft="76,260" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Import HID File.Paths[Data Conversion Output]"
+          TopLeft="224.333333333333,184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-76.3333333333333,76"
+              Start="0,0"
+              End="-76.3333333333333,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.8629441624365" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.8629441624365"
+                    Point2="0,30.8629441624365"
+                    Point3="-4,30.8629441624365" />
+                  <mssgle:LineSegment
+                    End="-72.3333333333333,30.8629441624365" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-72.3333333333333,30.8629441624365"
+                    Point2="-76.3333333333333,30.8629441624365"
+                    Point3="-76.3333333333333,34.8629441624365" />
+                  <mssgle:LineSegment
+                    End="-76.3333333333333,68.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1351,7 +1956,7 @@
     design-time-name="Package\Write Data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="159.2,41.6"
           Id="Package\Write Data\Excel Destination"
@@ -1391,7 +1996,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1415,6 +2022,22 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Import HID File\Error Output">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Import HID File\HID Historical">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

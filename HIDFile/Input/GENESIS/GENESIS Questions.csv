@@ -1,0 +1,350 @@
+﻿Title,Number,Text,Subtext,Type Of Question,Item Type,Path
+B.7 - National Provider Identifiers (NPIs),B.7,"
+National Provider Identifiers (NPIs)
+",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+A.1 - The MTF Commander signed last month's Commander’s Data Quality Statement acknowledging responsibility for the quality of data reported from the MTF.,A.1,The MTF Commander signed last month's Commander’s Data Quality Statement acknowledging responsibility for the quality of data reported from the MTF.,,Date,Item,teams/DHADQMCProgram/Lists/Question
+A.2 - The MTF DQ Manager submitted last month’s Commander’s Data Quality Statement with the Commander’s signature.,A.2,The MTF DQ Manager submitted last month’s Commander’s Data Quality Statement with the Commander’s signature.,,Date,Item,teams/DHADQMCProgram/Lists/Question
+"A.3 - The Data Quality Assurance Team or other designated structure met during the reporting month to complete the DQMC Review List. (Recommend attaching meeting minutes.)
+Data Month: _________________",A.3,"The Data Quality Assurance Team or other designated structure met during the reporting month to complete the DQMC Review List. (Recommend attaching meeting minutes.)
+Data Month: _________________",,Date and Data Month,Item,teams/DHADQMCProgram/Lists/Question
+"A.4 - The DQ Manager briefed prior data month's DQMC Review List, and Financial and Workload Data Reconciliation and Validation results to the MTF Executive Committee.",A.4,"The DQ Manager briefed prior data month's DQMC Review List, and Financial and Workload Data Reconciliation and Validation results to the MTF Executive Committee.",,Date,Item,teams/DHADQMCProgram/Lists/Question
+A.5 - Does your MTF have a Coding Compliance Plan?,A.5,Does your MTF have a Coding Compliance Plan?,,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+"A.5.a - Reviewed and approved annually for update?    Date: ________________
+Respond Yes if annual suspense of 1 October was met IAW with the DHA Coding Compliance Plan.",A.5.a,"Reviewed and approved annually for update?    Date: ________________
+Respond Yes if annual suspense of 1 October was met IAW with the DHA Coding Compliance Plan.      ",,Date and Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+"A.5.b - Reviewed and approved quarterly for compliance?     Date: ________________
+Respond Yes if quarterly review was accomplished (3 months since the previous review)",A.5.b,"Reviewed and approved quarterly for compliance?     Date: ________________
+Respond Yes if quarterly review was accomplished (3 months since the previous review)",,Date and Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+"A.5.c - Does your coding compliance plan provide a process that ensures providers leaving the facility have completed all medical record documentation prior to their departure?
+Respond Yes if the MTF’s current CCP provides a process.",A.5.c,"Does your coding compliance plan provide a process that ensures providers leaving the facility have completed all medical record documentation prior to their departure?
+Respond Yes if the MTF’s current CCP provides a process.  ",,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+A.6 - Does your MTF have a Uniform Business Office (UBO) Compliance Plan.,A.6,Does your MTF have a Uniform Business Office (UBO) Compliance Plan.,,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+A.6.a - Reviewed and approved annually for update?       Date:,A.6.a,Reviewed and approved annually for update?       Date:,,Date and Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+A.6.b - Reviewed and approved quarterly for compliance?        Date:,A.6.b,Reviewed and approved quarterly for compliance?        Date:,,Date and Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+A.7 - Training for Data Quality Manager and Data Quality Assurance Team members,A.7,Training for Data Quality Manager and Data Quality Assurance Team members,,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"A.7.a - When did the Data Quality Manager attend a DQMC Training Course in the last three years or DQMC Webinars, at least two in the FY?
+1st Date(s) attended:                         2nd Date attended:",A.7.a,"When did the Data Quality Manager attend a DQMC Training Course in the last three years or DQMC Webinars, at least two in the FY?
+1st Date(s) attended:                         2nd Date attended:",,Dates,Item,teams/DHADQMCProgram/Lists/Question
+"A.7.b - When did the new Data Quality Manager attend the New DQ Manager’s training?
+Date attended:",A.7.b,"When did the new Data Quality Manager attend the New DQ Manager’s training?
+Date attended:",,Date,Item,teams/DHADQMCProgram/Lists/Question
+"A.7.c - When did the Data Quality Assurance Team members attend DQMC Training Course, or DQMC Webinars, at least two in the FY?
+1st Date(s) attended:                               2nd Date attended:",A.7.c,"When did the Data Quality Assurance Team members attend DQMC Training Course, or DQMC Webinars, at least two in the FY?
+1st Date(s) attended:                               2nd Date attended:",,Dates,Item,teams/DHADQMCProgram/Lists/Question
+"A.7.d - Have all the members of the DQ Assurance Team been trained in their area of responsibility?
+
+Note: A.7.d is to be used locally to ensure that team members have training in their functions and responsibilities. (For example, Analysis: WISD...",A.7.d,"Have all the members of the DQ Assurance Team been trained in their area of responsibility?
+
+Note: A.7.d is to be used locally to ensure that team members have training in their functions and responsibilities. (For example, Analysis: WISDOM; Medical Expense and Performance Reporting System (MEPRS): Online or Face to Face; Uniformed Business Office (UBO): UBO 101 webinar; Patient Administration (PAD): PAD Course; Coding: Intro, Annual, or Certified; Financial Officer/Comptroller: Intro or Annual Course; Group Practice Manager: Intro or Annual Course.)",,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+B.2 - Are data month central system upgrades (and associated loading activities) being received and loaded?,B.2,Are data month central system upgrades (and associated loading activities) being received and loaded?,,Statement,Item,teams/DHADQMCProgram/Lists/Question
+B.2.b - Annual ICD Codes should be available by Oct 1:  CCE  Date received:__________,B.2.b,Annual ICD Codes should be available by Oct 1:  CCE Date received:__________,,Dates,Item,teams/DHADQMCProgram/Lists/Question
+B.2.e - Annual CPT and HCPCS Codes should be available by Jan 1:  CCE  Date received:_________,B.2.e,Annual CPT and HCPCS Codes should be available by Jan 1:  CCE Date received:_________,,Dates,Item,teams/DHADQMCProgram/Lists/Question
+B.6 - From the monthly CCE Encounter Status Summary report:,B.6,From the monthly CCE Encounter Status Summary report:,,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"B.6.a - a) From the monthly CCE Encounter Status Summary report (complete list) for outpatient and APV, what percentage of billable encounters have an encounter coding status of “Completed”?
+Formula: Number of billable encounters with coding statu...",B.6.a,"a) From the monthly CCE Encounter Status Summary report (complete list) for outpatient and APV, what percentage of billable encounters have an encounter coding status of “Completed”?
+Formula: Number of billable encounters with coding status of “Completed” / number of total billable encounters.",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"B.6.b - b) What percentage of billable encounters have an encounter coding status of “Auto Released in CCE”?
+Formula: Number of billable encounters with coding status of “Auto Released in CCE” /number of total billable encounters.",B.6.b,"b) What percentage of billable encounters have an encounter coding status of “Auto Released in CCE”?
+Formula: Number of billable encounters with coding status of “Auto Released in CCE” /number of total billable encounters.",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"B.6.c - c) What percentage of billable encounters have an encounter coding status of “On Review Hold”?
+Formula: Number of billable encounters with coding status of “On Review Hold” /number of total billable encounters.",B.6.c,"c) What percentage of billable encounters have an encounter coding status of “On Review Hold”?
+Formula: Number of billable encounters with coding status of “On Review Hold” /number of total billable encounters.",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"B.6.d - What percentage of billable encounters does not have an encounter coding status?
+Formula: Number of billable encounters with coding status of “?” /number of total billable encounters.                                     Note: These questio...",B.6.d,"What percentage of billable encounters does not have an encounter coding status?
+Formula: Number of billable encounters with coding status of “?” /number of total billable encounters.                                     Note: These questions are to determine CCE Utility",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+B.7.c - Does your MTF have a process in place to ensure providers are updating their demographic data in their NPPES NPI Registry account upon arrival at the MTF?,B.7.c,"
+ Does your MTF have a process in place to ensure providers are updating their demographic data in their NPPES NPI Registry account upon arrival at the MTF?",,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+"B.8.a - Is there a process in place to ensure outpatient appointments in Ambulatory locations were in a status other than ""Checked In"" or “Confirmed"" by the end of each duty day?",B.8.a,"
+ Is there a process in place to ensure outpatient appointments in Ambulatory locations were in a status other than ""Checked In"" or “Confirmed"" by the end of each duty day?",,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+B.8.b - How many encounters from the data month or prior remain unresolved on the Past Due Arrivals Worklist?,B.8.b,"
+ How many encounters from the data month or prior remain unresolved on the Past Due Arrivals Worklist?",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"C.1.a - Was the monthly MEPRS (EAS) financial reconciliation completed, validated, and approved by the MTF Resource Manager (i.e., Navy or Army Comptroller or Air Force Budget Officer or Analyst) prior to MEPRS monthly transmission?",C.1.a,"
+ Was the monthly MEPRS (EAS) financial reconciliation completed, validated, and approved by the MTF Resource Manager (i.e., Navy or Army Comptroller or Air Force Budget Officer or Analyst) prior to MEPRS monthly transmission? ",,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+"C.1.d - For DMHRSi, have the “DoD Batch and Timecard Status Report” and “HR Data Issues affecting EAS” or similar reports been run and the results presented to the Commanding Officer for review?",C.1.d,"
+ For DMHRSi, have the “DoD Batch and Timecard Status Report” and “HR Data Issues affecting EAS” or similar reports been run and the results presented to the Commanding Officer for review?",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.1.e - For DMHRSi, what percentage of timecards were submitted by the suspense date? (Timecards submitted by DHA determined date.)                                                                                                  Formula: Number of ...",C.1.e,"
+ For DMHRSi, what percentage of timecards were submitted by the suspense date? (Timecards submitted by DHA determined date.)                                                                                                 Formula: Number of timecards submitted on-time / total number of timecards for an MTF. ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.1.f - For DMHRSi, what percentage of timecards were approved by the suspense date? (Timecards approved by DHA determined date.)
+Formula: Number of timecards approved on-time / total number of timecards for an MTF.",C.1.f,"
+ For DMHRSi, what percentage of timecards were approved by the suspense date? (Timecards approved by DHA determined date.)
+Formula: Number of timecards approved on-time / total number of timecards for an MTF. ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.1.g - What is the percentage of Assigned Military FTEs reporting Labor Cost Accounting (LCA) data at the MTF per month?
+Formula:  Count of Assigned Military FTEs reporting Available or Unavailable Time in DMHRSi at MTF for data month / count of ...",C.1.g,"
+ What is the percentage of Assigned Military FTEs reporting Labor Cost Accounting (LCA) data at the MTF per month?
+Formula:  Count of Assigned Military FTEs reporting Available or Unavailable Time in DMHRSi at MTF for data month / count of Assigned Military FTEs for data month. ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+C.2 - Potential Duplicate or Multiple Patient Registration – General Patient Identity Issues To be answered by the MTF’s PAD/TOPA Department,C.2,"
+ Potential Duplicate or Multiple Patient Registration – General Patient Identity Issues To be answered by the MTF’s PAD/TOPA Department",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.2.a - Does the MTF have an Identity Management POC identified, and have they reviewed the patient identity remediation and ticket process guidance available on the MilSuite?",C.2.a,"
+ Does the MTF have an Identity Management POC identified, and have they reviewed the patient identity remediation and ticket process guidance available on the MilSuite?",,,Item,teams/DHADQMCProgram/Lists/Question
+C.2.b - Do you actively meet with this person to discuss errors each month?,C.2.b,"
+ Do you actively meet with this person to discuss errors each month?",,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+C.2.c - How many Patient Identity tickets were opened in the current reporting month?,C.2.c,"
+ How many Patient Identity tickets were opened in the current reporting month?",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"C.2.d - How many Patient Identity tickets have been open for more than 10 and 30 days respectively?
+
+                                                Note: The clock starts when the ticket is open, tickets open for more than 10 days total, tickets...",C.2.d,"How many Patient Identity tickets have been open for more than 10 and 30 days respectively?
+                                                Note: The clock starts when the ticket is open, tickets open for more than 10 days total, tickets open for more than 30 days (not counting ones open for more than 10 days) total.",,Count,Item,teams/DHADQMCProgram/Lists/Question
+C.2.d.1 - Number of Patient Identity tickets open for more than 10 days,C.2.d.1,Number of Patient Identity tickets open for more than 10 days,,Count,Item,teams/DHADQMCProgram/Lists/Question
+"C.3 - Were system outputs transmitted to central repositories by date specified in DHA guidelines?
+(Question 4 (a, b, c, d) of DQ Statement.)",C.3,"Were system outputs transmitted to central repositories by date specified in DHA guidelines?
+(Question 4 (a, b, c, d) of DQ Statement.)",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+C.3.a - MEPRS (EAS) – 45 calendar days,C.3.a,MEPRS (EAS) – 45 calendar days,,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+C.8 - What is the number of ABACUS OHI Discovery hits that have not been loaded into Patient Demographics and OHI in ABACUS for billing?,C.8,What is the number of ABACUS OHI Discovery hits that have not been loaded into Patient Demographics and OHI in ABACUS for billing?,,Statement,Item,teams/DHADQMCProgram/Lists/Question
+C.8.a - Beginning balance for Fiscal Year,C.8.a,Beginning balance for Fiscal Year,,Count,Item,teams/DHADQMCProgram/Lists/Question
+"C.8.b. - Number of OHI Discovery hits resolved for data month.""",C.8.b.," Number of OHI Discovery hits resolved for data month.""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"C.8.c - ""Ending balance
+Formula: (c) = Beginning balance (a) - Number of OHI Discovery hits resolved this month (b)""",C.8.c,"""Ending balance
+Formula: (c) = Beginning balance (a) - Number of OHI Discovery hits resolved this month (b)""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+C.10 - Data Quality Coding Error Reports                                                                                                                                                   A series of Data Quality reports were developed to detect an...,C.10,"Data Quality Coding Error Reports                                                                                                                                                   A series of Data Quality reports were developed to detect and report errors in coding that require correction. These reports must be run each data month for each parent DMIS ID to respond to the following questions:(Question 10 (a, b, c) of DQ Statement) 
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.10.a. - ""CAPER Errors""",C.10.a.,"""a) CAPER Errors""
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+C.10.a.2 - Total Outpatient Encounters Corrected with Gender Conflicts / total Outpatient Encounters Detected with Gender Conflicts,C.10.a.2,"Total Outpatient Encounters Corrected with Gender Conflicts / total Outpatient Encounters Detected with Gender Conflicts
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+C.10.a.2.a - Total from Encounters of Male Patients with Female Only Diagnoses Report,C.10.a.2.a,"Total from Encounters of Male Patients with Female Only Diagnoses Report
+ ",,,Item,teams/DHADQMCProgram/Lists/Question
+C.10.a.2.b - Total from Encounters of Female Patients with Male Only Diagnoses Report,C.10.a.2.b,"Total from Encounters of Female Patients with Male Only Diagnoses Report
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+C.10.a.2.c - Total from Encounters with Maternity Diagnosis in Non-Maternity Patients Report,C.10.a.2.c,"Total from Encounters with Maternity Diagnosis in Non-Maternity Patients Report
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+C.10.a.3 - Total Outpatient Encounters Corrected with Age Conflicts / total Outpatient Encounters Detected with Age Conflicts,C.10.a.3,"Total Outpatient Encounters Corrected with Age Conflicts / total Outpatient Encounters Detected with Age Conflicts
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.10.a.3.a - Total from Encounters with Adult Diagnosis in Pediatric Patients Report""",C.10.a.3.a,"Total from Encounters with Adult Diagnosis in Pediatric Patients Report""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"C.10.a.3.b - ""Total from Newborn Diagnosis in Older Patients Report""",C.10.a.3.b,"""Total from Newborn Diagnosis in Older Patients Report""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+C.10.a.3.c - Total from Pediatric Diagnosis in Non-pediatric Patients Report,C.10.a.3.c,"Total from Pediatric Diagnosis in Non-pediatric Patients Report
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"C.10.b - ""Total detected inpatient records corrected / total invalid inpatient records detected (total (1) and (2))""",C.10.b,"""Total detected inpatient records corrected / total invalid inpatient records detected (total (1) and (2))""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+C.10.b.1 - Total Inpatient Records from Questionable Admissions Based on Diagnosis Report,C.10.b.1,"Total Inpatient Records from Questionable Admissions Based on Diagnosis Report
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+C.10.b.2 - Total Inpatient Records from the Un-groupable MS-DRG Report,C.10.b.2,"Total Inpatient Records from the Un-groupable MS-DRG Report
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+C.15 - MHS GENESIS Monthly Coding Audits. For MHS GENESIS MTFs in the data month:,C.15,"MHS GENESIS Monthly Coding Audits. For MHS GENESIS MTFs in the data month:
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.15.a - ""What is the  total percentage of coding audits conducted in the data month?""",C.15.a,"""What is the  total percentage of coding audits conducted in the data month?""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.15.a.1 - ""Percentage of Inpatient audits conducted""",C.15.a.1,"""Percentage of Inpatient audits conducted""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.15.a.2 - ""Percentage of ambulatory audits conducted""",C.15.a.2,"""Percentage of ambulatory audits conducted""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.15.a.3 - ""Percentage of Day Surgery audits conducted""",C.15.a.3,"""Percentage of Day Surgery audits conducted""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.15.b.  - ""b)    What is the percentage of MTF coders?  (Assigned/Authorized)""",C.15.b. ,"""b)    What is the percentage of MTF coders?  (Assigned/Authorized)""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.15.b.1. - ""(1)    Percentage of Active Duty Coders""",C.15.b.1.,"""(1)    Percentage of Active Duty Coders""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.15.b.2. - ""(2)    Percentage of General Service (GS) Coders""",C.15.b.2.,"""(2)    Percentage of General Service (GS) Coders""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+C.15.b.3. - (3)Percentage of Contract Coders,C.15.b.3.,"(3)Percentage of Contract Coders
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16. - ""In a random review of MHS GENESIS Inpatient encounters from the data month, the DHA DQMC Program in coordination with the DHA Medical Coding Program will determine the specific random sample to be audited in accordance with the DHA Coding ...",C.16.,"""In a random review of MHS GENESIS Inpatient encounters from the data month, the DHA DQMC Program in coordination with the DHA Medical Coding Program will determine the specific random sample to be audited in accordance with the DHA Coding Compliance Plan.  A minimum of 30 encounters or financial identification numbers (FINs) should be pulled randomly from the entire population of MTF Inpatient encounters for the audit in a given month (e.g., 1-30 June).
+(Questions 14 (a,b,c,d,e,f,g) of the DQ Statement). (See DoDI 6040.42 and DHA-PI 6040.07)
+Note: A random sample of 30 encounters per MTF will provide a statistical confidence level of 90%, with a confidence interval or sampling error range of plus or minus 15%. 
+Note:  In accordance with the DHA Coding Compliance Plan, all coding errors identified in audits will be corrected or appealed by the MTF coding staff no later than five (5) business days after notification to the MTF of audit completion. 
+Stakeholders may request that DHA Medical Coding Program conduct additional focused audits, in addition to the random audits being conducted for the DQMC Program (i.e., pull an additional number of encounters to be used in a focused audit, on specific clinics or departments).  The focused audits may assist each MTF in targeting its coding improvement efforts, while the random-sample audit results can be extrapolated to assess the overall coding accuracy for the MTF. ""
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.a. - ""For the Inpatient encounter selected to be audited, is complete documentation available for coding audit?  Documentation includes documentation in the electronic record of the encounter.  (Denominator equals sample size.)
+Formula:  Number...",C.16.a.,"""For the Inpatient encounter selected to be audited, is complete documentation available for coding audit?  Documentation includes documentation in the electronic record of the encounter.  (Denominator equals sample size.)
+Formula:  Number of adequately documented Inpatient encounters available / number of requested encounters ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.b. - ""What is the percentage of Inpatient encounters whose assigned MS-DRG codes were correct?
+Formula:  Number of correct MS-DRGs / total number of MS-DRGs """,C.16.b.,"""What is the percentage of Inpatient encounters whose assigned MS-DRG codes were correct?
+Formula:  Number of correct MS-DRGs / total number of MS-DRGs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.c. - ""What is the percentage of Inpatient encounter ICD-10-PCS codes audited and deemed correct?
+Formula:  Number of correct ICD-10-PCS codes / total number of ICD-10-PCS codes """,C.16.c.,"""What is the percentage of Inpatient encounter ICD-10-PCS codes audited and deemed correct?
+Formula:  Number of correct ICD-10-PCS codes / total number of ICD-10-PCS codes ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.d. - ""What is the percentage of Inpatient encounter ICD-10-CM codes audited and deemed correct?
+Formula:  Number of correct ICD-10-CM codes / total number of ICD-10-CM codes 
+""",C.16.d.,"""What is the percentage of Inpatient encounter ICD-10-CM codes audited and deemed correct?
+Formula:  Number of correct ICD-10-CM codes / total number of ICD-10-CM codes 
+""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.e. - ""e) What is the percentage of Inpatient encounters audited with zero errors (encounter level pass/fail)?
+Formula:  Number of Inpatient encounter level pass (zero errors) / total number of encounters audited """,C.16.e.,"""e) What is the percentage of Inpatient encounters audited with zero errors (encounter level pass/fail)?
+Formula:  Number of Inpatient encounter level pass (zero errors) / total number of encounters audited ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.f. - ""What is the percentage of Inpatient Professional Services Rounds (IPSR) encounters E&M codes audited and deemed correct?
+Formula:  Number of correct E&M codes / total number of E&M codes """,C.16.f.,"""What is the percentage of Inpatient Professional Services Rounds (IPSR) encounters E&M codes audited and deemed correct?
+Formula:  Number of correct E&M codes / total number of E&M codes ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.g. - ""What is the percentage of IPSR encounters ICD-10-CM codes audited and deemed correct?
+Formula:  Number of correct ICD-10-CM codes / total number of ICD-10-CM codes """,C.16.g.,"""What is the percentage of IPSR encounters ICD-10-CM codes audited and deemed correct?
+Formula:  Number of correct ICD-10-CM codes / total number of ICD-10-CM codes ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.h. - ""What is the percentage of IPSR encounters CPT codes audited and deemed correct?
+Formula:  Number of correct CPT codes / total number of CPT codes """,C.16.h.,"""What is the percentage of IPSR encounters CPT codes audited and deemed correct?
+Formula:  Number of correct CPT codes / total number of CPT codes ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.i. - ""What is the percentage of IPSR encounters audited with zero errors (encounter level pass/fail)?
+Formula:  Number of IPSR encounter level pass (zero errors) / total number of encounters audited """,C.16.i.,"""What is the percentage of IPSR encounters audited with zero errors (encounter level pass/fail)?
+Formula:  Number of IPSR encounter level pass (zero errors) / total number of encounters audited ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.16.j. - ""What is the percentage of professional service encounters audited which anesthesia services were present and deemed correct?
+Formula:  Number of encounters audited with present and correct anesthesia codes / total number of professional s...",C.16.j.,"""What is the percentage of professional service encounters audited which anesthesia services were present and deemed correct?
+Formula:  Number of encounters audited with present and correct anesthesia codes / total number of professional service encounters audited ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.17. - ""In a random review of MHS GENESIS ambulatory encounters from the data month, the DHA DQMC Program in coordination with the DHA Medical Coding Program will determine the specific random sample to be audited in accordance with the DHA Coding...",C.17.,"""In a random review of MHS GENESIS ambulatory encounters from the data month, the DHA DQMC Program in coordination with the DHA Medical Coding Program will determine the specific random sample to be audited in accordance with the DHA Coding Compliance Plan.  A minimum of 30 encounters or financial identification numbers (FINs) should be pulled randomly from the entire population of MTF ambulatory encounters for the audit in a given month (e.g., 1-30 June).
+(Questions 15 (a,b,c,d) of the DQ Statement). (See DoDI 6040.42 and DHA-PI 6040.07)
+Note: A random sample of 30 encounters per MTF will provide a statistical confidence level of 90%, with a confidence interval or sampling error range of plus or minus 15%. 
+Note:  In accordance with the DHA Coding Compliance Plan, all coding errors identified in audits will be corrected or appealed by the MTF coding staff no later than five (5) business days after notification to the MTF of audit completion. 
+Stakeholders may request that DHA Medical Coding Program conduct additional focused audits, in addition to the random audits being conducted for the DQMC Program (i.e., pull an additional number of encounters to be used in a focused audit, on specific clinics or departments).  The focused audits may assist each MTF in targeting its coding improvement efforts, while the random-sample audit results can be extrapolated to assess the overall coding accuracy for the MTF. ""
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.17.a. - ""For the ambulatory encounter selected to be audited, is complete documentation available for coding audit?  Documentation includes documentation in the electronic record of the encounter.  (Denominator equals sample size.)
+Formula:  Numbe...",C.17.a.,"""For the ambulatory encounter selected to be audited, is complete documentation available for coding audit?  Documentation includes documentation in the electronic record of the encounter.  (Denominator equals sample size.)
+Formula:  Number of adequately documented ambulatory encounters available / number of requested ambulatory encounters ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.17.b. - ""What is the percentage of ambulatory encounters with E&M codes deemed correct?
+Formula:  Number of correct E&M codes / total number of E&M codes """,C.17.b.,"""What is the percentage of ambulatory encounters with E&M codes deemed correct?
+Formula:  Number of correct E&M codes / total number of E&M codes ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.17.c. - ""What is the percentage of ambulatory encounters with ICD-10-CM codes deemed correct?
+Formula:  Number of correct ICD-10-CM codes / total number of ICD-10-CM codes""",C.17.c.,"""What is the percentage of ambulatory encounters with ICD-10-CM codes deemed correct?
+Formula:  Number of correct ICD-10-CM codes / total number of ICD-10-CM codes""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.17.d. - ""What is the percentage of ambulatory encounters with CPT codes deemed correct?
+Formula:  Number of correct CPT codes / total number of CPT codes""",C.17.d.,"""What is the percentage of ambulatory encounters with CPT codes deemed correct?
+Formula:  Number of correct CPT codes / total number of CPT codes""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.17.e. - ""What is the percentage of ambulatory encounters audited with zero errors (encounter level pass/fail)?
+Formula: Number of ambulatory encounter level pass (zero errors) / total number of records audited""",C.17.e.,"""What is the percentage of ambulatory encounters audited with zero errors (encounter level pass/fail)?
+Formula: Number of ambulatory encounter level pass (zero errors) / total number of records audited""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.18. - ""In a random review of MHS GENESIS Day Surgery encounters (ambulatory procedure visits (APVs)) from the data month, the DHA DQMC Program in coordination with the DHA Medical Coding Program will determine the specific random sample to be aud...",C.18.,"""In a random review of MHS GENESIS Day Surgery encounters (ambulatory procedure visits (APVs)) from the data month, the DHA DQMC Program in coordination with the DHA Medical Coding Program will determine the specific random sample to be audited in accordance with the DHA Coding Compliance Plan.  A minimum of 30 encounters or financial identification numbers (FINs) should be pulled randomly from the entire population of MTF Day Surgery encounters for the audit in a given month (e.g., 1-30 June).
+(Questions  16 (a,b,c) of the DQ Statement). (See DoDI 6040.42 and DHA-PI 6040.07)
+Note: A random sample of 30 encounters per MTF will provide a statistical confidence level of 90%, with a confidence interval or sampling error range of plus or minus 15%. 
+Note:  In accordance with the DHA Coding Compliance Plan, all coding errors identified in audits will be corrected or appealed by the MTF coding staff no later than five (5) business days after notification to the MTF of audit completion. 
+Stakeholders may request that DHA Medical Coding Program conduct additional focused audits, in addition to the random audits being conducted for the DQMC Program (i.e., pull an additional number of encounters to be used in a focused audit, on specific clinics or departments).  The focused audits may assist each MTF in targeting its coding improvement efforts, while the random-sample audit results can be extrapolated to assess the overall coding accuracy for the MTF. ""
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.18.a. - ""For the Day Surgery encounter selected to be audited, is complete documentation available for coding audit?  Documentation includes documentation in the electronic record of the encounter.  (Denominator equals sample size.)
+Formula:  Numb...",C.18.a.,"""For the Day Surgery encounter selected to be audited, is complete documentation available for coding audit?  Documentation includes documentation in the electronic record of the encounter.  (Denominator equals sample size.)
+Formula:  Number of adequately documented Day Surgery encounters available / number of requested Day Surgery encounters ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.18.b. - ""What is the percentage of Day Surgery encounters with ICD-10-CM codes deemed correct?
+Formula:  Number of correct ICD-10-CM codes / total number of ICD-10-CM cod""",C.18.b.,"""What is the percentage of Day Surgery encounters with ICD-10-CM codes deemed correct?
+Formula:  Number of correct ICD-10-CM codes / total number of ICD-10-CM cod""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.18.c. - ""What is the percentage of Day Surgery encounters with CPT codes deemed correct?
+Formula:  Number of correct CPT codes / total number of CPT codes """,C.18.c.,"""What is the percentage of Day Surgery encounters with CPT codes deemed correct?
+Formula:  Number of correct CPT codes / total number of CPT codes ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.18.d. - ""What is the percentage of Day Surgery professional service encounters  audited which anesthesia services were present and deemed correct?
+Formula:  Number of Day Surgery encounters audited with present and correct anesthesia codes / total...",C.18.d.,"""What is the percentage of Day Surgery professional service encounters  audited which anesthesia services were present and deemed correct?
+Formula:  Number of Day Surgery encounters audited with present and correct anesthesia codes / total number of professional service Day Surgery encounters audited ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.18.e. - ""What is the percentage of Day Surgery encounters audited with zero errors (encounter level pass/fail)?
+Formula: Number of Day Surgery encounter level pass (zero errors) / total number of Day Surgery encounters audited """,C.18.e.,"""What is the percentage of Day Surgery encounters audited with zero errors (encounter level pass/fail)?
+Formula: Number of Day Surgery encounter level pass (zero errors) / total number of Day Surgery encounters audited ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.19 - ""In a random review of MHS GENESIS Inpatient encounters from the data month, the DHA DQMC Program will determine the specific random sample to be audited. A minimum of 30 encounter financial identification numbers (FINs) will be pulled rand...",C.19,"""In a random review of MHS GENESIS Inpatient encounters from the data month, the DHA DQMC Program will determine the specific random sample to be audited. A minimum of 30 encounter financial identification numbers (FINs) will be pulled randomly from the entire population of MTF inpatient encounters for audit in a given data month (e.g. 1-30 June).
+Note:  A random sample of 30 encounters per MTF will provide a statistical confidence level of 90%, with a confidence interval or sampling error range of plus or minus 15%. ""
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.19.a) - ""What percentage of audited Inpatient encounter FINs have an appropriate admission order?
+Formula:  Number of audited Inpatient encounter FINs with appropriate admission order / number of audited Inpatient encounter FINs """,C.19.a),"""What percentage of audited Inpatient encounter FINs have an appropriate admission order?
+Formula:  Number of audited Inpatient encounter FINs with appropriate admission order / number of audited Inpatient encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.19.b) - ""What percentage of audited Inpatient encounter FINs have an accurate encounter type (which reflects the correct status of the patient)?
+Formula:  Number of audited encounter FINs with accurate encounter type / number of audited Inpatient ...",C.19.b),"""What percentage of audited Inpatient encounter FINs have an accurate encounter type (which reflects the correct status of the patient)?
+Formula:  Number of audited encounter FINs with accurate encounter type / number of audited Inpatient encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.19.c) - ""What percentage of audited Inpatient encounter FINs have an accurate discharge date?
+Formula:  Number of audited Inpatient encounter FINs with accurate discharge date / number of audited Inpatient encounter FINs """,C.19.c),"""What percentage of audited Inpatient encounter FINs have an accurate discharge date?
+Formula:  Number of audited Inpatient encounter FINs with accurate discharge date / number of audited Inpatient encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.19.d) - ""What percentage of audited Inpatient encounter FINs were discharged with a complete discharge summary?
+Formula:  Number of audited Inpatient encounter FINs with complete discharge summary / number of audited Inpatient encounter FINs """,C.19.d),"""What percentage of audited Inpatient encounter FINs were discharged with a complete discharge summary?
+Formula:  Number of audited Inpatient encounter FINs with complete discharge summary / number of audited Inpatient encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.20 - ""C.20. In a random review of MHS GENESIS ambulatory encounters from the data month, the DHA DQMC Program will determine the specific random sample to be audited. A minimum of 30 encounter financial identification numbers (FINs) will be pull...",C.20,"""C.20. In a random review of MHS GENESIS ambulatory encounters from the data month, the DHA DQMC Program will determine the specific random sample to be audited. A minimum of 30 encounter financial identification numbers (FINs) will be pulled randomly from the entire population of MTF ambulatory encounters for audit in a given month (e.g. 1-30 June).
+Note:  A random sample of 30 encounters per MTF will provide a statistical confidence level of 90%, with a confidence interval or sampling error range of plus or minus 15%.""
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.20.a) - ""What percentage of audited ambulatory encounter FINs have an accurate appointment status on the date service was provided?
+Formula:  Number of audited ambulatory encounter FINs with an accurate appointment status / number of audited ambul...",C.20.a),"""What percentage of audited ambulatory encounter FINs have an accurate appointment status on the date service was provided?
+Formula:  Number of audited ambulatory encounter FINs with an accurate appointment status / number of audited ambulatory encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.20.b) - ""What percentage of audited ambulatory encounter FINs reflect documentation on the date service was provided?
+Formula:  Number of audited ambulatory encounter FINs with documentation on the date service was provided / number of audited amb...",C.20.b),"""What percentage of audited ambulatory encounter FINs reflect documentation on the date service was provided?
+Formula:  Number of audited ambulatory encounter FINs with documentation on the date service was provided / number of audited ambulatory encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.20.c) - ""What percentage of audited ambulatory encounter FINs captured all documentation relevant to the current episode of care against the assigned appointment FIN?
+Formula:  Number of audited ambulatory encounter FINs with documentation relevan...",C.20.c),"""What percentage of audited ambulatory encounter FINs captured all documentation relevant to the current episode of care against the assigned appointment FIN?
+Formula:  Number of audited ambulatory encounter FINs with documentation relevant to current episode of care / number of audited ambulatory encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.20.d) - ""What percentage of audited ambulatory encounter FINs have complete documentation signed by the attending physician?
+Formula:  Number of audited ambulatory encounter FINs with complete documentation signed by attending physician / number o...",C.20.d),"""What percentage of audited ambulatory encounter FINs have complete documentation signed by the attending physician?
+Formula:  Number of audited ambulatory encounter FINs with complete documentation signed by attending physician / number of audited ambulatory encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.20.e) - ""What percentage of audited ambulatory encounter FINs have an order initiated for clinic services during the current episode of care?
+Formula:  Number of audited ambulatory encounter FINs with orders initiated for clinic services during th...",C.20.e),"""What percentage of audited ambulatory encounter FINs have an order initiated for clinic services during the current episode of care?
+Formula:  Number of audited ambulatory encounter FINs with orders initiated for clinic services during the current episode of care / number of audited ambulatory encounter FINs""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.20.f) - ""What percentage of audited ambulatory encounter FINs have a charge to capture services provided within the clinic environment?
+Formula:  Number of audited ambulatory encounter FINs with charges provided / number of audited ambulatory enco...",C.20.f),"""What percentage of audited ambulatory encounter FINs have a charge to capture services provided within the clinic environment?
+Formula:  Number of audited ambulatory encounter FINs with charges provided / number of audited ambulatory encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.21 - ""In a random review of MHS GENESIS Day Surgery encounters (ambulatory procedure visits (APVs)) from the data month, the DHA DQMC Program will determine the specific random sample to be audited. A minimum of 30 encounter financial identifica...",C.21,"""In a random review of MHS GENESIS Day Surgery encounters (ambulatory procedure visits (APVs)) from the data month, the DHA DQMC Program will determine the specific random sample to be audited. A minimum of 30 encounter financial identification numbers (FINs) will be pulled randomly from the entire population of MTF Day Surgery encounters for audit in a given month (e.g. 1-30 June).
+Note:  A random sample of 30 encounters per MTF will provide a statistical confidence level of 90%, with a confidence interval or sampling error range of plus or minus 15%.""
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"C.21.a) - ""What percentage of audited Day Surgery encounter FINs have an accurate appointment status on the date service was provided?
+Formula:  Number of audited Day Surgery encounter FINs with accurate appointment status / number of Day Surgery au...",C.21.a),"""What percentage of audited Day Surgery encounter FINs have an accurate appointment status on the date service was provided?
+Formula:  Number of audited Day Surgery encounter FINs with accurate appointment status / number of Day Surgery audited encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.21.b) - ""What percentage of audited Day Surgery encounter FINs reflect documentation on the date service was provided?
+Formula:  Number of audited Day Surgery encounter FINs with documentation on date of service / number of audited Day Surgery enc...",C.21.b),"""What percentage of audited Day Surgery encounter FINs reflect documentation on the date service was provided?
+Formula:  Number of audited Day Surgery encounter FINs with documentation on date of service / number of audited Day Surgery encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.21.c) - ""What percentage of audited Day Surgery encounter FINs have an accurate encounter type compared to the Nurse Unit Location?
+Formula:  Number of audited Day Surgery encounter FINs with an accurate encounter type compared to Nurse Unit Locat...",C.21.c),"""What percentage of audited Day Surgery encounter FINs have an accurate encounter type compared to the Nurse Unit Location?
+Formula:  Number of audited Day Surgery encounter FINs with an accurate encounter type compared to Nurse Unit Location / number of audited Day Surgery encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.21.d) - ""What percentage of audited Day Surgery encounter FINs have an accurate discharge date?
+Formula:  Number of audited Day Surgery encounter FINs with accurate discharge date / number of audited Day Surgery encounter FINs """,C.21.d),"""What percentage of audited Day Surgery encounter FINs have an accurate discharge date?
+Formula:  Number of audited Day Surgery encounter FINs with accurate discharge date / number of audited Day Surgery encounter FINs ""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"C.21.e) - ""What percentage of audited Day Surgery encounter FINs were discharged with a complete Operative Note, signed by the performing provider (with appropriate attestation and signature)?
+Formula:  Number of audited Day Surgery encounter FINs w...",C.21.e),"""What percentage of audited Day Surgery encounter FINs were discharged with a complete Operative Note, signed by the performing provider (with appropriate attestation and signature)?
+Formula:  Number of audited Day Surgery encounter FINs with a complete Operative Note signed by provider / number of Day Surgery audited encounter FINs""
+ ",,Count and Percentage,Item,teams/DHADQMCProgram/Lists/Question
+"E.1 - ""What is the number of unresolved incident tickets (to include incident tickets with no action taken)?
+Note: Work with the System POC or the DQAT to provide a comment clarifying the status of the unresolved incident tickets.""",E.1,"""What is the number of unresolved incident tickets (to include incident tickets with no action taken)?
+Note: Work with the System POC or the DQAT to provide a comment clarifying the status of the unresolved incident tickets.""
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+E.1.a. - Number of Tickets in Current Data Month,E.1.a.,"Number of Tickets in Current Data Month
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"E.1.a.1. - ""1)    ABACUS
+patient accounting systems (i.e. ABACUS, CPAM, or equivalent)""",E.1.a.1.,"""1)    ABACUS
+{patient accounting systems (i.e. ABACUS, CPAM, or equivalent)}""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"E.1.a.3. - ""3)    CCE
+Coding Editor (CCE, 3M 360 or equivalent)""",E.1.a.3.,"""3)    CCE
+{Coding Editor (CCE, 3M 360 or equivalent)}""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"E.1.a.5. - ""5)    DMHRSi""",E.1.a.5.,"""5)    DMHRSi""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+E.1.a.8. - 8)MHS GENESIS,E.1.a.8.,"8)MHS GENESIS
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+E.1.b. - Number of Tickets in Previous Data Months,E.1.b.,"Number of Tickets in Previous Data Months
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+"E.1.b.1. - ""1)    ABACUS
+patient accounting systems (i.e. ABACUS, CPAM, or equivalent)""",E.1.b.1.,"""1)    ABACUS
+{patient accounting systems (i.e. ABACUS, CPAM, or equivalent)}""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"E.1.b.3. - ""3)    CCE
+Coding Editor (CCE, 3M 360 or equivalent)""",E.1.b.3.,"""3)    CCE
+{Coding Editor (CCE, 3M 360 or equivalent)}""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"E.1.b.5. - ""5)    DMHRSi""",E.1.b.5.,"""5)    DMHRSi""
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+E.1.b.8. - 8)MHS GENESIS,E.1.b.8.,"8)MHS GENESIS
+ ",,Count,Item,teams/DHADQMCProgram/Lists/Question
+"E.2. - Has the MTF MEPRS Office reviewed the MHS GENESIS Patient Care Location (PCL) and Service Resource Location (SRL) tables quarterly, and submitted trouble tickets for corrections as necessary?",E.2.,"Has the MTF MEPRS Office reviewed the MHS GENESIS Patient Care Location (PCL) and Service Resource Location (SRL) tables quarterly, and submitted trouble tickets for corrections as necessary?
+ ",,Statement,Item,teams/DHADQMCProgram/Lists/Question
+E.2.a. - Patient Care Location (PCL) Table      Date Reviewed: ________,E.2.a.,"Patient Care Location (PCL) Table      Date Reviewed: ________
+ ",,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
+E.2.b. - Service Resource Location (SRL) Table     Date Reviewed: ________,E.2.b.,"Service Resource Location (SRL) Table     Date Reviewed: ________
+ ",,Yes or No,Item,teams/DHADQMCProgram/Lists/Question
